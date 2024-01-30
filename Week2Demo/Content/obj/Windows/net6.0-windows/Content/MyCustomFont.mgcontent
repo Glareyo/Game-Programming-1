@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>C:/Users/cedillo02/Source/Repos/Glareyo/Game-Programming-1/Week2Demo/Content/MyCustomFont.spritefont</SourceFile>
+  <SourceTime>2022-07-26T06:44:10-05:00</SourceTime>
+  <DestFile>C:/Users/cedillo02/Source/Repos/Glareyo/Game-Programming-1/Week2Demo/Content/bin/Windows/Content/MyCustomFont.xnb</DestFile>
+  <DestTime>2024-01-30T16:05:14.2489792-06:00</DestTime>
+  <Importer>FontDescriptionImporter</Importer>
+  <ImporterTime>2022-07-26T06:44:56-05:00</ImporterTime>
+  <Processor>FontDescriptionProcessor</Processor>
+  <ProcessorTime>2022-07-26T06:44:56-05:00</ProcessorTime>
+  <Parameters>
+    <Key>PremultiplyAlpha</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>TextureFormat</Key>
+    <Value>Compressed</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>
