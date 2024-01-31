@@ -17,15 +17,21 @@ namespace Week2Demo
         Vector2 pacDirection; //Direction pacman is going
         float pacSpeed; //How fast the pacman goes in a direction. Magnitude.
 
-
+        #region Notes Taking
         //*************************************************
         SpriteFont myCustomFont;
         Texture2D mySprite;
         Vector2 mySpriteLocation; //X,y Location
         Vector2 mySpriteDirection; //Direction pacman is going
         //*************************************************
+        #endregion
 
-
+        #region Gravity
+        //Gravity
+        //float PacManSpeedMax
+        Vector2 GravityDir; //Gravity Direction
+        float GravityAccel; //Gravity Acceleration
+        #endregion
 
         public Game1()
         {
@@ -53,7 +59,7 @@ namespace Week2Demo
 
             // TODO: use this.Content to load your game content here
             pacman = Content.Load<Texture2D>("PacmanSingle");
-            pacLocation = new Vector2(100, 150);
+            pacLocation = new Vector2(GraphicsDevice.Viewport.Width/2, GraphicsDevice.Viewport.Height/2);
             pacDirection = new Vector2(1, 1);
 
             //Before, used to be 100 pixels per call
@@ -69,6 +75,8 @@ namespace Week2Demo
                 Exit();
 
             // TODO: Add your update logic here
+            UpdateGravity();
+
             UpdatePacmanMove(gameTime);
             UpdatePacmanKeepOnScreen();
 
@@ -77,6 +85,31 @@ namespace Week2Demo
 
 
             base.Update(gameTime);
+        }
+
+        void UpdateKeyboardInput()
+        {
+            if (Keyboard.GetState().IsKeyDown(Keys.Down))
+            {
+                GravityDir = new Vector2(0, 1);
+            }
+            if (Keyboard.GetState().IsKeyDown(Keys.Up))
+            {
+                GravityDir = new Vector2(0, -1);
+            }
+            if (Keyboard.GetState().IsKeyDown(Keys.Right))
+            {
+                GravityDir = new Vector2(1, 0);
+            }
+            if (Keyboard.GetState().IsKeyDown(Keys.Left))
+            {
+                GravityDir = new Vector2(1, 0);
+            }
+        }
+
+        void UpdateGravity()
+        {
+
         }
         void UpdatePacmanMove(GameTime gameTime)
         {
@@ -123,7 +156,7 @@ namespace Week2Demo
             _spriteBatch.Draw(pacman, pacLocation, Color.White);
             _spriteBatch.DrawString(myFont, "pacLocation" + pacLocation.ToString(), new Vector2(100, 100), Color.White);
             _spriteBatch.End();
-
+            
             base.Draw(gameTime);
         }
     }
