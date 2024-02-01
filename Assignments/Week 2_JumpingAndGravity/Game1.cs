@@ -19,6 +19,8 @@ namespace Week_2_JumpingAndGravity
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        SpriteRepo spriteRepo;
+
         PacMan pac;
 
         SpriteFont font;
@@ -29,6 +31,11 @@ namespace Week_2_JumpingAndGravity
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+
+            spriteRepo = new SpriteRepo();
+
+            spriteRepo.AddSprite(new PacMan());
+
             pac = new PacMan();
 
         }

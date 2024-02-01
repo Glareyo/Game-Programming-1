@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Week_2_JumpingAndGravity.Interfaces;
 
 //Credit: Jeff Meyers
 // Provided lecture and course materials
@@ -10,10 +11,11 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Week_2_JumpingAndGravity
 {
-    public class Sprite
+    public class Sprite //: ISprite
     {
-        public Texture2D Texture;
-        public Vector2 Loc, Dir;
-        public float SpeedMax;
+        public Texture2D Texture;// { get; set; }
+        public Vector2 Loc;// { get; set; }
+        public Vector2 Dir;// { get; set; }
+        public float SpeedMax;// { get; set; }
     }
 }
