@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Monogame Picture")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+87ea5b3d2ee0b232e73d16b42121b3232210bba9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Monogame Picture")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Monogame Picture")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
