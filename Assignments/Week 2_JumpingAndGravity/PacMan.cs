@@ -24,6 +24,13 @@ namespace Week_2_JumpingAndGravity
         public float Accel = 10;               //Acceloration
         public Vector2 GravityDir;             //Direction for gravity
 
+        public Keys UpKey;
+        public Keys DownKey;
+        public Keys LeftKey;
+        public Keys RightKey;
+
+        public Color textureColor;
+
         public PacMan()
         {
             inputKeyboard = new KeyboardHandler();
@@ -31,6 +38,28 @@ namespace Week_2_JumpingAndGravity
             GravityDir = new Vector2(0, 1);     //Gravity direction starts as down
             GravityAccel = 200.0f;
             Friction = 10.0f;
+
+            UpKey = Keys.Up;
+            DownKey = Keys.Down;
+            LeftKey = Keys.Left;
+            RightKey = Keys.Right;
+
+            textureColor = Color.Green;
+        }
+        public PacMan(Keys _UpKey, Keys _DownKey, Keys _LeftKey, Keys _RightKey, Color _textureColor)
+        {
+            inputKeyboard = new KeyboardHandler();
+            isOnGround = false; //Techical Debt should maybe be in the the LoadContent
+            GravityDir = new Vector2(0, 1);     //Gravity direction starts as down
+            GravityAccel = 200.0f;
+            Friction = 10.0f;
+
+            UpKey = _UpKey;
+            DownKey = _DownKey;
+            LeftKey = _LeftKey;
+            RightKey = _RightKey;
+
+            textureColor = _textureColor;
         }
 
         public void UpdatePacManMove(float time)
@@ -76,7 +105,7 @@ namespace Week_2_JumpingAndGravity
         {
             inputKeyboard.Update();
             //Jump
-            if (inputKeyboard.WasKeyPressed(Keys.Up))
+            if (inputKeyboard.WasKeyPressed(UpKey))
             {
                 this.Dir = this.Dir + new Vector2(0, jumpHeight);
                 isOnGround = false; //remove onGround bool so gravity will kick in again
@@ -86,8 +115,8 @@ namespace Week_2_JumpingAndGravity
             {
                 //Allows left and right movement on ground 
                 //This way you cannot change direction in the air this is a design descision
-                if ((!(inputKeyboard.IsHoldingKey(Keys.Left))) &&
-                    (!(inputKeyboard.IsHoldingKey(Keys.Right))))
+                if ((!(inputKeyboard.IsHoldingKey(LeftKey))) &&
+                    (!(inputKeyboard.IsHoldingKey(RightKey))))
                 {
                     if (this.Dir.X > 0) //If the pacman has a positive direction in X(moving right)
                     {
@@ -102,11 +131,11 @@ namespace Week_2_JumpingAndGravity
                 }
 
                 //If keys left or Right key is down acceorate up to make speed
-                if (inputKeyboard.IsHoldingKey(Keys.Left))
+                if (inputKeyboard.IsHoldingKey(LeftKey))
                 {
                     this.Dir.X = Math.Max((this.SpeedMax * -1.0f), this.Dir.X - Accel);
                 }
-                if (inputKeyboard.IsHoldingKey(Keys.Right))
+                if (inputKeyboard.IsHoldingKey(RightKey))
                 {
                     this.Dir.X = Math.Min(this.SpeedMax, this.Dir.X + Accel);
                 }

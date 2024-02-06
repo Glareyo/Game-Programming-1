@@ -19,9 +19,7 @@ namespace Week_2_JumpingAndGravity
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        SpriteRepo spriteRepo;
-
-        PacMan pac;
+        PacManRepo pacRepo;
 
         SpriteFont font;
         string OutputData;
@@ -32,12 +30,11 @@ namespace Week_2_JumpingAndGravity
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
 
-            spriteRepo = new SpriteRepo();
+            pacRepo = new PacManRepo();
 
-            spriteRepo.AddSprite(new PacMan());
-
-            pac = new PacMan();
-
+            pacRepo.AddPacMan(new PacMan());
+            pacRepo.AddPacMan(new PacMan(Keys.W, Keys.S, Keys.A, Keys.D,Color.Yellow));
+            pacRepo.AddPacMan(new PacMan(Keys.I, Keys.K, Keys.J, Keys.L,Color.Red));
         }
 
         /// <summary>
@@ -61,14 +58,15 @@ namespace Week_2_JumpingAndGravity
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            pac.Texture = Content.Load<Texture2D>("pacManSingle");
-            //Place pacman at the center of the screen
-            pac.Loc = new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2);
-
-            //In the sample Direction also has magnitude
-            pac.Dir = new Vector2(50, 0);
-
-            pac.SpeedMax = 200;
+            foreach(PacMan pac in pacRepo.GetList)
+            {
+                //Place pacman at the center of the screen
+                pac.Texture = Content.Load<Texture2D>("pacManSingle");
+                pac.Loc = new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2);
+                //In the sample Direction also has magnitude
+                pac.Dir = new Vector2(50, 0);
+                pac.SpeedMax = 200;
+            }
 
             font = Content.Load<SpriteFont>("Arial");
         }
@@ -95,13 +93,15 @@ namespace Week_2_JumpingAndGravity
             //Elapsed time since last update
             float time = (float)gameTime.ElapsedGameTime.TotalMilliseconds;
 
-            pac.UpdatePacManMove(time);
+            foreach (PacMan pac in pacRepo.GetList)
+            {
+                pac.UpdatePacManMove(time);
+                pac.UpdateKeepPacmanOnScreen(GraphicsDevice);
+                pac.UpdateInputFromKeyboard();
+            }
 
-            pac.UpdateKeepPacmanOnScreen(GraphicsDevice);
-            pac.UpdateInputFromKeyboard();
-
-            OutputData = string.Format("PacDir:{0}\nPacLoc:{1}\nGravityDir:{2}\nGravityAccel:{3}\nTime:{4}\njumpHeight:{5}", pac.Dir.ToString(),
-                pac.Loc.ToString(), pac.GravityDir.ToString(), pac.GravityAccel.ToString(), time, pac.jumpHeight);
+            OutputData = string.Format("PacDir:{0}\nPacLoc:{1}\nGravityDir:{2}\nGravityAccel:{3}\nTime:{4}\njumpHeight:{5}", pacRepo.GetList[0].Dir.ToString(),
+                pacRepo.GetList[0].Loc.ToString(), pacRepo.GetList[0].GravityDir.ToString(), pacRepo.GetList[0].GravityAccel.ToString(), time, pacRepo.GetList[0].jumpHeight);
 
             base.Update(gameTime);
         }
@@ -122,7 +122,11 @@ namespace Week_2_JumpingAndGravity
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             spriteBatch.Begin();
-            spriteBatch.Draw(pac.Texture, pac.Loc, Color.Green);
+
+            foreach(PacMan pac in pacRepo.GetList)
+            {
+                spriteBatch.Draw(pac.Texture, pac.Loc, pac.textureColor);
+            }
 
             /*
              * Draw parameters on screen
