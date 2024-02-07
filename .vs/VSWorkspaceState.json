@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\HelloMonoGame"
+    "\\HelloMonoGame",
+    "\\HelloMonoGame\\Content"
   ],
-  "SelectedNode": "\\HelloMonoGame\\Game1.cs",
+  "SelectedNode": "\\HelloMonoGame\\Content\\PacmanSingle.png",
   "PreviewInSolutionExplorer": false
 }
