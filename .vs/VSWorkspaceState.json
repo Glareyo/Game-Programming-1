@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\HelloMonoGame",
-    "\\HelloMonoGame\\Content"
+    "\\Assignments",
+    "\\Assignments\\Wk3HW_InterestingMovement",
+    "\\HelloMonoGame"
   ],
-  "SelectedNode": "\\HelloMonoGame\\Content\\PacmanSingle.png",
+  "SelectedNode": "\\Assignments\\Wk3HW_InterestingMovement\\Wk3HW_InterestingMovement.sln",
   "PreviewInSolutionExplorer": false
 }
