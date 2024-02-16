@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "2EXHrWddhTJG9gquZF0+LadFHdoIRhqLfgQAmwm2Tx8s7rq1hLA3pserCFrNB1iH0bMfUV3RA4KZ5xG/9qwc9g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\cedillo02\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\MongogameLibrary\\MongogameLibrary.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\cedillo02\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512"
+  ],
+  "logs": []
+}

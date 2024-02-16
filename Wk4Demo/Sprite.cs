@@ -46,6 +46,7 @@ namespace Wk4Demo
         public override void Draw(GameTime gameTime) 
         {
             sb.Begin();
+            
             sb.Draw(Texture, Location, Color.White);
             sb.End();
             base.Draw(gameTime);
