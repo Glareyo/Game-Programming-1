@@ -9,6 +9,7 @@ namespace Wk4HW_FPSTesting
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         PacMan pac;
+        FPSComponent fps;
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -20,7 +21,7 @@ namespace Wk4HW_FPSTesting
         {
             // TODO: Add your initialization logic here
             Components.Add(new PacMan(this));
-
+            Components.Add(new FPSComponent(this));
             base.Initialize();
         }
 

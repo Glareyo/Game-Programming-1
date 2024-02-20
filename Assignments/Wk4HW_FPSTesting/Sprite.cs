@@ -40,7 +40,7 @@ namespace Wk4HW_FPSTesting
             Origin = new Vector2(Texture.Width / 2, Texture.Height / 2);
             Location = new Vector2(this.Game.GraphicsDevice.Viewport.Width / 2, this.Game.GraphicsDevice.Viewport.Height / 2);
             Direction = new Vector2(1, 0);
-
+    
             base.LoadContent();
         }
         public override void Draw(GameTime gameTime)
