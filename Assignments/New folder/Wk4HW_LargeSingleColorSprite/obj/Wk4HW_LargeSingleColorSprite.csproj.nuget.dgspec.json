@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\New folder\\Wk4HW_LargeSingleColorSprite\\Wk4HW_LargeSingleColorSprite.csproj": {}
+    "C:\\Users\\nemo1\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\New folder\\Wk4HW_LargeSingleColorSprite\\Wk4HW_LargeSingleColorSprite.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\New folder\\Wk4HW_LargeSingleColorSprite\\Wk4HW_LargeSingleColorSprite.csproj": {
+    "C:\\Users\\nemo1\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\New folder\\Wk4HW_LargeSingleColorSprite\\Wk4HW_LargeSingleColorSprite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\New folder\\Wk4HW_LargeSingleColorSprite\\Wk4HW_LargeSingleColorSprite.csproj",
+        "projectUniqueName": "C:\\Users\\nemo1\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\New folder\\Wk4HW_LargeSingleColorSprite\\Wk4HW_LargeSingleColorSprite.csproj",
         "projectName": "Wk4HW_LargeSingleColorSprite",
-        "projectPath": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\New folder\\Wk4HW_LargeSingleColorSprite\\Wk4HW_LargeSingleColorSprite.csproj",
+        "projectPath": "C:\\Users\\nemo1\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\New folder\\Wk4HW_LargeSingleColorSprite\\Wk4HW_LargeSingleColorSprite.csproj",
         "packagesPath": "C:\\Users\\nemo1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\New folder\\Wk4HW_LargeSingleColorSprite\\obj\\",
+        "outputPath": "C:\\Users\\nemo1\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\New folder\\Wk4HW_LargeSingleColorSprite\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -11,7 +11,7 @@ namespace Wk4HW_SingleColorSprite
     {
         public TestSprite(Game game) : base(game)
         {
-            TextureName = "TestSprite_Multi";
+            TextureName = "TestSprite_Single";
         }
 
         public TestSprite(Game game, string _textureName) : base(game, _textureName)

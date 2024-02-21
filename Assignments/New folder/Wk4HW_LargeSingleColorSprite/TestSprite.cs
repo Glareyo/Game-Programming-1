@@ -11,7 +11,7 @@ namespace Wk4HW_LargeSingleColorSprite
     {
         public TestSprite(Game game) : base(game)
         {
-            TextureName = "TestSprite_LargeMulti2";
+            TextureName = "TestSprite_LargeSingle";
         }
 
         public TestSprite(Game game, string _textureName) : base(game, _textureName)
