@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
+using Wk3HW_InterestingMovement;
 
 namespace Wk5_OneButtonGame
 {
@@ -8,6 +10,8 @@ namespace Wk5_OneButtonGame
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+
+        TextBox tutorialBox;
 
         public Game1()
         {
@@ -20,6 +24,8 @@ namespace Wk5_OneButtonGame
         {
             // TODO: Add your initialization logic here
 
+            //Components.Add(new Level(this));
+            Components.Add(new Menu(this));
             base.Initialize();
         }
 
@@ -28,6 +34,7 @@ namespace Wk5_OneButtonGame
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+            tutorialBox = new TextBox(this,"Press SPACEBAR when the light shines.\n");
         }
 
         protected override void Update(GameTime gameTime)
@@ -36,6 +43,7 @@ namespace Wk5_OneButtonGame
                 Exit();
 
             // TODO: Add your update logic here
+            tutorialBox.Location = new Vector2(10, 10);
 
             base.Update(gameTime);
         }
@@ -45,6 +53,7 @@ namespace Wk5_OneButtonGame
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+            tutorialBox.Draw(gameTime);
 
             base.Draw(gameTime);
         }

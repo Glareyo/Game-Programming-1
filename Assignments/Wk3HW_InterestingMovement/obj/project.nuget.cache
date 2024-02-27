@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3UAjKvaZ0pWqNDIKh6xs8T65xwW1zRho9P3g9WvTGWsmqp/IEFWsJEyOMQy3Zd9ZdZN9LNaewmJjxvuAiLPw9w==",
+  "dgSpecHash": "URturGTrQahzV26L/o5jOJHOG9m7tlfPZZhD1RCAiUGvJYOGGLIEevvRdB8GSiCsxCMTF69QNJe0PPEu9VV/GQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nemo1\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\Wk3HW_InterestingMovement\\Wk3HW_InterestingMovement.csproj",
+  "projectFilePath": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\Wk3HW_InterestingMovement\\Wk3HW_InterestingMovement.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nemo1\\.nuget\\packages\\libuv\\1.9.1\\libuv.1.9.1.nupkg.sha512",
     "C:\\Users\\nemo1\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\1.1.0\\microsoft.codeanalysis.analyzers.1.1.0.nupkg.sha512",

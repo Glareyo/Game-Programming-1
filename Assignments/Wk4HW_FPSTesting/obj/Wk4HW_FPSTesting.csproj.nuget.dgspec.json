@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\Wk4HW_FPSTesting\\Wk4HW_FPSTesting.csproj": {}
+    "C:\\Users\\nemo1\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\Wk4HW_FPSTesting\\Wk4HW_FPSTesting.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\Wk4HW_FPSTesting\\Wk4HW_FPSTesting.csproj": {
+    "C:\\Users\\nemo1\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\Wk4HW_FPSTesting\\Wk4HW_FPSTesting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\Wk4HW_FPSTesting\\Wk4HW_FPSTesting.csproj",
+        "projectUniqueName": "C:\\Users\\nemo1\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\Wk4HW_FPSTesting\\Wk4HW_FPSTesting.csproj",
         "projectName": "Wk4HW_FPSTesting",
-        "projectPath": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\Wk4HW_FPSTesting\\Wk4HW_FPSTesting.csproj",
+        "projectPath": "C:\\Users\\nemo1\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\Wk4HW_FPSTesting\\Wk4HW_FPSTesting.csproj",
         "packagesPath": "C:\\Users\\nemo1\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\nemo1\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\Wk4HW_FPSTesting\\obj\\",
         "projectStyle": "PackageReference",

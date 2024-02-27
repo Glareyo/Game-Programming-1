@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/nemo1/Source/Repos/Glareyo/Game-Programming-1/Assignments/Wk5_OneButtonGame/Content/button-hover.png</File>
+    <File>C:/Users/nemo1/Source/Repos/Glareyo/Game-Programming-1/Assignments/Wk5_OneButtonGame/Content/button-idle.png</File>
+    <File>C:/Users/nemo1/Source/Repos/Glareyo/Game-Programming-1/Assignments/Wk5_OneButtonGame/Content/light-blue.png</File>
+    <File>C:/Users/nemo1/Source/Repos/Glareyo/Game-Programming-1/Assignments/Wk5_OneButtonGame/Content/light-correct.png</File>
+    <File>C:/Users/nemo1/Source/Repos/Glareyo/Game-Programming-1/Assignments/Wk5_OneButtonGame/Content/light-green.png</File>
+    <File>C:/Users/nemo1/Source/Repos/Glareyo/Game-Programming-1/Assignments/Wk5_OneButtonGame/Content/light-incorrect.png</File>
+    <File>C:/Users/nemo1/Source/Repos/Glareyo/Game-Programming-1/Assignments/Wk5_OneButtonGame/Content/light-off.png</File>
+    <File>C:/Users/nemo1/Source/Repos/Glareyo/Game-Programming-1/Assignments/Wk5_OneButtonGame/Content/light-red.png</File>
+    <File>C:/Users/nemo1/Source/Repos/Glareyo/Game-Programming-1/Assignments/Wk5_OneButtonGame/Content/light-yellow.png</File>
+    <File>C:/Users/nemo1/Source/Repos/Glareyo/Game-Programming-1/Assignments/Wk5_OneButtonGame/Content/score-board.png</File>
+    <File>C:/Users/nemo1/Source/Repos/Glareyo/Game-Programming-1/Assignments/Wk5_OneButtonGame/Content/TextFont.spritefont</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>
