@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Wk4HW_MultiColorSprite")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+26bcfb5db71784c1bfd0b4c6e1e265d8fed72ced")]
 [assembly: System.Reflection.AssemblyProductAttribute("Wk4HW_MultiColorSprite")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Wk4HW_MultiColorSprite")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
