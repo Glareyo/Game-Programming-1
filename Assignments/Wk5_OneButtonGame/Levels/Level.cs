@@ -15,27 +15,27 @@ namespace Wk5_OneButtonGame
         public List<IGameComponent> LevelComponents;
         public SpriteBatch sb;
 
+        public enum State { Enabled, Disabled }
+        public State LevelState { get; private set; }
+
         public Level(Game game) : base(game)
         {
+            LevelState = State.Disabled;
             LevelComponents = new List<IGameComponent>();
         }
         public override void Initialize()
         {
-            AddComponents();
             base.Initialize();
         }
 
         public virtual void DisposeLevel()
         {
-            /*foreach (IGameComponent component in LevelComponents)
-            {
-                Game.Components.Remove(component);
-            }
-            Game.Components.Remove(this);*/
             Game.Components.Clear();
         }
-        public virtual void AddComponents()
+        public virtual void StartLevel()
         {
+            LevelState = State.Enabled;
+
             foreach(IGameComponent component in LevelComponents)
             {
                 Game.Components.Add(component);

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Wk3HW_InterestingMovement;
+using Wk5_OneButtonGame.Sprites;
 
 namespace Wk5_OneButtonGame
 {
@@ -25,7 +26,7 @@ namespace Wk5_OneButtonGame
         int screenWidth;
         int screenHeight;
 
-        int score;
+        public int score { get; private set; }
         int maxRounds;
         int currentRound;
 

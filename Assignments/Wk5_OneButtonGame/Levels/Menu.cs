@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Input;
 using Wk3HW_InterestingMovement;
+using System.CodeDom;
 
 namespace Wk5_OneButtonGame
 {
@@ -17,9 +18,11 @@ namespace Wk5_OneButtonGame
         List<Button> buttons;
         int selectedButton;
 
+        public int selectedOption { get; private set; }
+
         public Menu(Game game) : base(game)
         {
-            
+            selectedOption = 0;
         }
         public override void Initialize()
         {
@@ -81,13 +84,11 @@ namespace Wk5_OneButtonGame
             {
                 if (easyButton.IsClicked())
                 {
-                    DisposeLevel();
-                    Game.Components.Add(new LightLevel(Game, LightLevel.Difficulty.Easy));
+                    selectedOption = 1;
                 }
                 else if (hardButton.IsClicked())
                 {
-                    DisposeLevel();
-                    Game.Components.Add(new LightLevel(Game, LightLevel.Difficulty.Hard));
+                    selectedOption = 2;
                 }
                 else if (exitButton.IsClicked())
                 {

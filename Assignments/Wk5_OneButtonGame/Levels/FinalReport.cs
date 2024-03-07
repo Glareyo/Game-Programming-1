@@ -9,7 +9,7 @@ using Wk3HW_InterestingMovement;
 
 namespace Wk5_OneButtonGame
 {
-    public class FinalReport : GameComponent
+    public class FinalReport : Level
     {
         int finalScore;
         Button box;
@@ -34,14 +34,7 @@ namespace Wk5_OneButtonGame
             if (KeyboardHandler.WasKeyPressed(Microsoft.Xna.Framework.Input.Keys.Space))
             {
                 Game.Components.Add(new Menu(Game));
-                RemoveSelf();
             }
-        }
-
-        void RemoveSelf()
-        {
-            Game.Components.Remove(box);
-            Game.Components.Remove(this);
         }
     }
 }

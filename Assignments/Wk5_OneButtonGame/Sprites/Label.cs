@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Wk5_OneButtonGame
+namespace Wk5_OneButtonGame.Sprites
 {
     public class Label : Sprite
     {
@@ -27,7 +27,7 @@ namespace Wk5_OneButtonGame
 
         public override void Update(GameTime gameTime)
         {
-            textBox.Location = new Vector2(this.Location.X-(Texture.Width/2)+5, this.Location.Y-(Texture.Height/2));
+            textBox.Location = new Vector2(Location.X - Texture.Width / 2 + 5, Location.Y - Texture.Height / 2);
             textBox.text = text;
             base.Update(gameTime);
         }

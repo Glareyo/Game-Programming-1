@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
 using Wk3HW_InterestingMovement;
+using Wk5_OneButtonGame.Levels;
 
 namespace Wk5_OneButtonGame
 {
@@ -10,6 +11,9 @@ namespace Wk5_OneButtonGame
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+
+        LevelManager levelManager;
+        Menu m;
 
         TextBox tutorialBox;
 
@@ -24,8 +28,8 @@ namespace Wk5_OneButtonGame
         {
             // TODO: Add your initialization logic here
 
-            //Components.Add(new Level(this));
-            Components.Add(new Menu(this));
+            m = new Menu(this);
+            Components.Add(m);
             base.Initialize();
         }
 
@@ -44,6 +48,7 @@ namespace Wk5_OneButtonGame
 
             // TODO: Add your update logic here
             tutorialBox.Location = new Vector2(10, 10);
+            //levelManager.CheckLevelStatus();
 
             base.Update(gameTime);
         }
