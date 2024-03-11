@@ -1,15 +1,9 @@
 {
   "ExpandedNodes": [
-<<<<<<< HEAD
     "",
     "\\Assignments",
-    "\\Assignments\\Wk5_OneButtonGame",
-    "\\Assignments\\Wk5_OneButtonGame\\Content"
+    "\\Assignments\\BreakOut"
   ],
-  "SelectedNode": "\\Assignments\\Wk5_OneButtonGame\\Wk5_OneButtonGame.sln",
-=======
-    ""
-  ],
->>>>>>> e30c3049cab85bbca246ea8f5263fee696ecfbed
+  "SelectedNode": "\\Assignments\\BreakOut\\BreakOut.sln",
   "PreviewInSolutionExplorer": false
 }

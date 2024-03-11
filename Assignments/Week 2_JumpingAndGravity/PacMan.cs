@@ -65,7 +65,7 @@ namespace Week_2_JumpingAndGravity
         public void UpdatePacManMove(float time)
         {
             //Time corrected move. MOves PacMan By PacManDiv every Second
-            this.Loc = this.Loc + ((this.Dir * (time / 1000)));      //Simple Move PacMan by PacManDir
+            this.Loc = this.Loc + ((this.Dir * (time / 1000))); //Simple Move PacMan by PacManDir
 
             //Gravity also affects pacman
             this.Dir = this.Dir + (GravityDir * GravityAccel) * (time / 1000);
@@ -124,7 +124,6 @@ namespace Week_2_JumpingAndGravity
                     }
                     else //Else pacman has a negative direction.X (moving left)
                     {
-
                         this.Dir.X = Math.Min(0, this.Dir.X + Friction); //Add friction amount until X is 0
                     }
                     //Zero X is stopped so if you're no holding a key friction will slow down the movement until pacman stops

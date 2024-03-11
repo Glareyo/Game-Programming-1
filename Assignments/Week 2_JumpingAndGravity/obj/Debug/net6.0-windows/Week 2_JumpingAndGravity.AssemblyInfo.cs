@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Week 2_JumpingAndGravity")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+21fc2cda3625dc932b510b7edd1b08d9d0f6b385")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Week 2_JumpingAndGravity")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Week 2_JumpingAndGravity")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

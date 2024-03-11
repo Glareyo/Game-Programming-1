@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LseAA1H/tsxnvOqe4+LbGgnavjwyYG/e0MOJjAf8PE5R4AqaY3VxCXLRD6e0K31Bg2YWHtZ+xz8m0POWQecMtQ==",
+  "dgSpecHash": "jHmJLH9kJs3L+Fh3Ic53QkefBFZbLIeRxU4BAHS5DsCZoXdY923mnOlW1WQ7Rxx+8DnvSGDJLVyqL4mjVVSEcA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nemo1\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\New folder\\Wk4HW_SingleColorSprite\\Wk4HW_SingleColorSprite.csproj",
+  "projectFilePath": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\New folder\\Wk4HW_SingleColorSprite\\Wk4HW_SingleColorSprite.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nemo1\\.nuget\\packages\\libuv\\1.9.1\\libuv.1.9.1.nupkg.sha512",
     "C:\\Users\\nemo1\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\1.1.0\\microsoft.codeanalysis.analyzers.1.1.0.nupkg.sha512",

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/nemo1/source/repos/Glareyo/Game-Programming-1/Assignments/BreakOut/Content/ballBig.png</File>
+    <File>C:/Users/nemo1/source/repos/Glareyo/Game-Programming-1/Assignments/BreakOut/Content/ballSmall.png</File>
+    <File>C:/Users/nemo1/source/repos/Glareyo/Game-Programming-1/Assignments/BreakOut/Content/block_blue.png</File>
+    <File>C:/Users/nemo1/source/repos/Glareyo/Game-Programming-1/Assignments/BreakOut/Content/block_bubble.png</File>
+    <File>C:/Users/nemo1/source/repos/Glareyo/Game-Programming-1/Assignments/BreakOut/Content/block_bubbleBig.png</File>
+    <File>C:/Users/nemo1/source/repos/Glareyo/Game-Programming-1/Assignments/BreakOut/Content/block_earth.png</File>
+    <File>C:/Users/nemo1/source/repos/Glareyo/Game-Programming-1/Assignments/BreakOut/Content/block_greenWaveBig.png</File>
+    <File>C:/Users/nemo1/source/repos/Glareyo/Game-Programming-1/Assignments/BreakOut/Content/block_greenWaveSmall (1).png</File>
+    <File>C:/Users/nemo1/source/repos/Glareyo/Game-Programming-1/Assignments/BreakOut/Content/block_greenWaveSmall.png</File>
+    <File>C:/Users/nemo1/source/repos/Glareyo/Game-Programming-1/Assignments/BreakOut/Content/block_red.png</File>
+    <File>C:/Users/nemo1/source/repos/Glareyo/Game-Programming-1/Assignments/BreakOut/Content/block_yellow.png</File>
+    <File>C:/Users/nemo1/source/repos/Glareyo/Game-Programming-1/Assignments/BreakOut/Content/paddleBig.png</File>
+    <File>C:/Users/nemo1/source/repos/Glareyo/Game-Programming-1/Assignments/BreakOut/Content/paddleBiger.png</File>
+    <File>C:/Users/nemo1/source/repos/Glareyo/Game-Programming-1/Assignments/BreakOut/Content/paddleSmall.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

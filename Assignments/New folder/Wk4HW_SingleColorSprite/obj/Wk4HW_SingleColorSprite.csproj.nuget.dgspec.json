@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nemo1\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\New folder\\Wk4HW_SingleColorSprite\\Wk4HW_SingleColorSprite.csproj": {}
+    "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\New folder\\Wk4HW_SingleColorSprite\\Wk4HW_SingleColorSprite.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nemo1\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\New folder\\Wk4HW_SingleColorSprite\\Wk4HW_SingleColorSprite.csproj": {
+    "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\New folder\\Wk4HW_SingleColorSprite\\Wk4HW_SingleColorSprite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nemo1\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\New folder\\Wk4HW_SingleColorSprite\\Wk4HW_SingleColorSprite.csproj",
+        "projectUniqueName": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\New folder\\Wk4HW_SingleColorSprite\\Wk4HW_SingleColorSprite.csproj",
         "projectName": "Wk4HW_SingleColorSprite",
-        "projectPath": "C:\\Users\\nemo1\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\New folder\\Wk4HW_SingleColorSprite\\Wk4HW_SingleColorSprite.csproj",
+        "projectPath": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\New folder\\Wk4HW_SingleColorSprite\\Wk4HW_SingleColorSprite.csproj",
         "packagesPath": "C:\\Users\\nemo1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nemo1\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\New folder\\Wk4HW_SingleColorSprite\\obj\\",
+        "outputPath": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\New folder\\Wk4HW_SingleColorSprite\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
