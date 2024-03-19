@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using MonoGameLibrary.Util;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,30 +15,33 @@ namespace BreakOut
         Paddle paddle;
         PaddleController paddleController;
 
-        List<MonogameBlock> blocks;
-        MonogameBlock block;
+        BlockManager blockManager;
+        PowerupManager powerupManager;
+
+        GameConsole console;
 
         public GameHandler(Game game) : base(game)
         {
+            console = (GameConsole)this.Game.Services.GetService<IGameConsole>();
+            if (console == null)
+            {
+                console = new GameConsole(this.Game);
+                Game.Components.Add(console);
+            }
         }
 
         public override void Initialize()
         {
-            blocks = new List<MonogameBlock>();
-            
             ball = new Ball(Game);
             paddle = new Paddle(Game, ball);
             paddleController = new PaddleController(Game, ball);
-            block = new MonogameBlock(Game);
-
-            blocks.Add(block);
+            blockManager = new BlockManager(Game);
+            powerupManager = new PowerupManager(Game);
 
             Game.Components.Add(ball);
             Game.Components.Add(paddle);
-            Game.Components.Add(block);
-
-            Viewport vp = Game.GraphicsDevice.Viewport;
-            block.Location = new Vector2(vp.Width / 2, vp.Height / 2);
+            Game.Components.Add(blockManager);
+            Game.Components.Add(powerupManager);
 
             base.Initialize();
         }
@@ -50,13 +54,23 @@ namespace BreakOut
             base.Update(gameTime);
         }
 
+
         void CheckForBallCollision()
         {
-            foreach(MonogameBlock block in blocks)
+            foreach (Invader block in blockManager.Invaders)
             {
-                if (ball.Intersects(block))
+                if (ball.Intersects(block) && block.BlockState != BlockState.Broken)
                 {
-                    block.Hit();
+                    blockManager.BlockIsHit(block);
+                    ball.Direction.Y *= -1;
+                }
+            }
+            foreach (Powerup power in powerupManager.Powerups)
+            {
+                if (ball.Intersects(power) && power.State == PowerUpState.Idle)
+                {
+                    console.GameConsoleWrite($"Powerup Hit");
+                    powerupManager.PowerupIsHit(power);
                     ball.Direction.Y *= -1;
                 }
             }

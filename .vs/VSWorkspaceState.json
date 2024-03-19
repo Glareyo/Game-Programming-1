@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Assignments",
-    "\\Assignments\\BreakOut"
+    "\\Assignments\\Breakout_Midterm",
+    "\\Assignments\\Breakout_Midterm\\BreakOut"
   ],
-  "SelectedNode": "\\Assignments\\BreakOut\\BreakOut.sln",
+  "SelectedNode": "\\Assignments\\Breakout_Midterm\\BreakOut\\BreakOut.sln",
   "PreviewInSolutionExplorer": false
 }

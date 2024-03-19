@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4lV4l75Ot2uKQYUJ4aDi1c/HlhXAEfzkAetHgHAzTWSTNZA/prdd8b7/hzu37UddVRAZbypmFBBUcqUVEcu0lQ==",
+  "dgSpecHash": "cgdPr9un/+Os7EzxHtP1CcSpueETCbLoe1OvJgstk87/kaUPYDIpXXDo8CfWjk6k0bJBe69+CLmw2YMHzExTmw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\MonoGameLibrary\\MonoGameLibrary.csproj",
+  "projectFilePath": "C:\\Users\\nemo1\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\MonoGameLibrary\\MonoGameLibrary.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nemo1\\.nuget\\packages\\libuv\\1.9.1\\libuv.1.9.1.nupkg.sha512",
     "C:\\Users\\nemo1\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\1.1.0\\microsoft.codeanalysis.analyzers.1.1.0.nupkg.sha512",

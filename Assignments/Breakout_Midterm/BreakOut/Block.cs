@@ -4,7 +4,7 @@
 //Class from Jeff Meyers's Examples
 
 using Microsoft.Xna.Framework;
-    using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Graphics;
 using MonoGameLibrary.Sprite;
 using System;
 using System.Collections.Generic;
@@ -35,25 +35,27 @@ namespace BreakOut
 
         public virtual void Hit()
         {
-            this.hitCount++;
-            this.UpdateBlockState();
+            /*if (BlockState == BlockState.Normal)
+            {
+                BlockState = BlockState.Hit;
+            }
+            else if (BlockState == BlockState.Hit)
+            {
+                BlockState = BlockState.Broken;
+            }*/
         }
 
         public virtual void UpdateBlockState()
         {
-            switch (this.hitCount)
+            switch (this.BlockState)
             {
-                case 0:
-                    this.BlockState = BlockState.Normal;
-                    break;
-                case 1:
+                case BlockState.Normal:
                     this.BlockState = BlockState.Hit;
                     break;
-                case 2:
+                case BlockState.Hit:
                     this.BlockState = BlockState.Broken;
                     break;
             }
-
         }
     }
 
@@ -75,15 +77,13 @@ namespace BreakOut
         : base(game)
         {
             this.block = new Block();
-            NormalTextureName = "block_blue";
+            NormalTextureName = "ufoFrames/ufoF1";
             HitTextureName = "block_bubble";
-
-
         }
 
         protected virtual void updateBlockTexture()
         {
-            switch (block.BlockState)
+            switch (this.BlockState)
             {
                 case BlockState.Normal:
                     this.Visible = true;
@@ -93,9 +93,7 @@ namespace BreakOut
                     this.spriteTexture = HitTexture;
                     break;
                 case BlockState.Broken:
-                    this.spriteTexture = NormalTexture;
-                    //this.enabled = false;
-                    this.Visible = false; //don't show block
+                    RemoveSelf();
                     break;
             }
         }
@@ -111,7 +109,6 @@ namespace BreakOut
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
-            block.UpdateBlockState();
             UnityBlockUpdate();
         }
 
@@ -120,9 +117,27 @@ namespace BreakOut
             updateBlockTexture();
         }
 
-        public void Hit()
+        public virtual void Hit()
         {
-            this.block.Hit();
+            if (this.BlockState == BlockState.Normal)
+            {
+                this.BlockState = BlockState.Hit;
+            }
+            else if (this.BlockState == BlockState.Hit)
+            {
+                this.BlockState = BlockState.Broken;
+            }
+            updateBlockTexture();
+        }
+
+        public void Move(float speed, GameTime gameTime)
+        {
+            Location.Y += speed * gameTime.ElapsedGameTime.Milliseconds;
+        }
+
+        public void RemoveSelf()
+        {
+            Game.Components.Remove(this);
         }
     }
 }
