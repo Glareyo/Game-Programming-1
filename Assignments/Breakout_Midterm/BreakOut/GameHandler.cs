@@ -17,6 +17,7 @@ namespace BreakOut
 
         BlockManager blockManager;
         PowerupManager powerupManager;
+        BallManager ballManager;
 
         GameConsole console;
 
@@ -37,6 +38,7 @@ namespace BreakOut
             paddleController = new PaddleController(Game, ball);
             blockManager = new BlockManager(Game);
             powerupManager = new PowerupManager(Game);
+            ballManager = new BallManager(Game,ball);
 
             Game.Components.Add(ball);
             Game.Components.Add(paddle);
@@ -57,26 +59,30 @@ namespace BreakOut
 
         void CheckForBallCollision()
         {
-            foreach (Invader block in blockManager.Invaders)
+            for(int i = 0; i < ballManager.balls.Count; i++)
             {
-                if (ball.Intersects(block) && block.BlockState != BlockState.Broken)
+                ball = ballManager.balls[i];
+                foreach (Invader block in blockManager.Invaders)
                 {
-                    blockManager.BlockIsHit(block);
+                    if (ball.Intersects(block) && block.BlockState != BlockState.Broken)
+                    {
+                        blockManager.BlockIsHit(block);
+                        ball.Direction.Y *= -1;
+                    }
+                }
+                foreach (Powerup power in powerupManager.Powerups)
+                {
+                    if (ball.Intersects(power) && power.State == PowerUpState.Idle)
+                    {
+                        console.GameConsoleWrite($"Powerup Hit");
+                        powerupManager.PowerupIsHit(power);
+                        ballManager.PowerUpBall(ball, power);
+                    }
+                }
+                if (ball.Intersects(paddle))
+                {
                     ball.Direction.Y *= -1;
                 }
-            }
-            foreach (Powerup power in powerupManager.Powerups)
-            {
-                if (ball.Intersects(power) && power.State == PowerUpState.Idle)
-                {
-                    console.GameConsoleWrite($"Powerup Hit");
-                    powerupManager.PowerupIsHit(power);
-                    ball.Direction.Y *= -1;
-                }
-            }
-            if (ball.Intersects(paddle))
-            {
-                ball.Direction.Y *= -1;
             }
         }
     }

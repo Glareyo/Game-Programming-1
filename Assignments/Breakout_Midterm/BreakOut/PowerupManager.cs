@@ -64,9 +64,29 @@ namespace BreakOut
         {
             Powerup p = new Powerup(Game);
             p.Location = new Vector2(random.Next(15,vp.Width-15), random.Next(15,vp.Height/2));
+            p.Type = PowerUpType.Duplicate;
+            //p.Type = GenerateType();
 
             Game.Components.Add(p);
             Powerups.Add(p);
+        }
+        PowerUpType GenerateType()
+        {
+            int index = random.Next(0,2);
+            switch (index)
+            {
+                case 0:
+                    return PowerUpType.Duplicate;
+                    break;
+                case 1:
+                    return PowerUpType.Explode;
+                    break;
+                case 2:
+                    return PowerUpType.TripleClone;
+                    break;
+            }
+
+            return PowerUpType.Duplicate;
         }
     }
 }

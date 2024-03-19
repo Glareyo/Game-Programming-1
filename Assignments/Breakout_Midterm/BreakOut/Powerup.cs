@@ -11,9 +11,13 @@ namespace BreakOut
 {
 
     public enum PowerUpState { Idle, Hit }
+    public enum PowerUpType { Duplicate, Explode, TripleClone }
+
     public class Powerup : DrawableSprite
     {
         public PowerUpState State;
+        public PowerUpType Type;
+
 
         public Powerup(Game game) : base(game)
         {
