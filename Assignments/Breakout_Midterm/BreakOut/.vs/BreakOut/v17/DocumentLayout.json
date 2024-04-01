@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{99BF4699-7C0A-4047-9540-33DE5D888500}|BreakOut.csproj|c:\\users\\nemo1\\source\\repos\\glareyo\\game-programming-1\\assignments\\breakout_midterm\\breakout\\powerupmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99BF4699-7C0A-4047-9540-33DE5D888500}|BreakOut.csproj|solutionrelative:powerupmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99BF4699-7C0A-4047-9540-33DE5D888500}|BreakOut.csproj|c:\\users\\nemo1\\source\\repos\\glareyo\\game-programming-1\\assignments\\breakout_midterm\\breakout\\blockmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99BF4699-7C0A-4047-9540-33DE5D888500}|BreakOut.csproj|solutionrelative:blockmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99BF4699-7C0A-4047-9540-33DE5D888500}|BreakOut.csproj|c:\\users\\nemo1\\source\\repos\\glareyo\\game-programming-1\\assignments\\breakout_midterm\\breakout\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99BF4699-7C0A-4047-9540-33DE5D888500}|BreakOut.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99BF4699-7C0A-4047-9540-33DE5D888500}|BreakOut.csproj|c:\\users\\nemo1\\source\\repos\\glareyo\\game-programming-1\\assignments\\breakout_midterm\\breakout\\gamehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99BF4699-7C0A-4047-9540-33DE5D888500}|BreakOut.csproj|solutionrelative:gamehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99BF4699-7C0A-4047-9540-33DE5D888500}|BreakOut.csproj|c:\\users\\nemo1\\source\\repos\\glareyo\\game-programming-1\\assignments\\breakout_midterm\\breakout\\powerup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99BF4699-7C0A-4047-9540-33DE5D888500}|BreakOut.csproj|solutionrelative:powerup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99BF4699-7C0A-4047-9540-33DE5D888500}|BreakOut.csproj|c:\\users\\nemo1\\source\\repos\\glareyo\\game-programming-1\\assignments\\breakout_midterm\\breakout\\levels\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99BF4699-7C0A-4047-9540-33DE5D888500}|BreakOut.csproj|solutionrelative:levels\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99BF4699-7C0A-4047-9540-33DE5D888500}|BreakOut.csproj|c:\\users\\nemo1\\source\\repos\\glareyo\\game-programming-1\\assignments\\breakout_midterm\\breakout\\block.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99BF4699-7C0A-4047-9540-33DE5D888500}|BreakOut.csproj|solutionrelative:block.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99BF4699-7C0A-4047-9540-33DE5D888500}|BreakOut.csproj|c:\\users\\nemo1\\source\\repos\\glareyo\\game-programming-1\\assignments\\breakout_midterm\\breakout\\levels\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99BF4699-7C0A-4047-9540-33DE5D888500}|BreakOut.csproj|solutionrelative:levels\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99BF4699-7C0A-4047-9540-33DE5D888500}|BreakOut.csproj|c:\\users\\nemo1\\source\\repos\\glareyo\\game-programming-1\\assignments\\breakout_midterm\\breakout\\levels\\gamebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99BF4699-7C0A-4047-9540-33DE5D888500}|BreakOut.csproj|solutionrelative:levels\\gamebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99BF4699-7C0A-4047-9540-33DE5D888500}|BreakOut.csproj|c:\\users\\nemo1\\source\\repos\\glareyo\\game-programming-1\\assignments\\breakout_midterm\\breakout\\levels\\buttonhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99BF4699-7C0A-4047-9540-33DE5D888500}|BreakOut.csproj|solutionrelative:levels\\buttonhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99BF4699-7C0A-4047-9540-33DE5D888500}|BreakOut.csproj|c:\\users\\nemo1\\source\\repos\\glareyo\\game-programming-1\\assignments\\breakout_midterm\\breakout\\levels\\buttontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99BF4699-7C0A-4047-9540-33DE5D888500}|BreakOut.csproj|solutionrelative:levels\\buttontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,35 +38,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Powerup.cs",
-              "DocumentMoniker": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\Powerup.cs",
-              "RelativeDocumentMoniker": "Powerup.cs",
-              "ToolTip": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\Powerup.cs",
-              "RelativeToolTip": "Powerup.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAQwCMAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T18:30:20.451Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Block.cs",
-              "DocumentMoniker": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\Block.cs",
-              "RelativeDocumentMoniker": "Block.cs",
-              "ToolTip": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\Block.cs",
-              "RelativeToolTip": "Block.cs",
-              "ViewState": "AQIAAHkAAAAAAAAAAAAmwIkAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T18:43:48.332Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -69,41 +50,93 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "GameHandler.cs",
               "DocumentMoniker": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\GameHandler.cs",
               "RelativeDocumentMoniker": "GameHandler.cs",
               "ToolTip": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\GameHandler.cs",
               "RelativeToolTip": "GameHandler.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAAgwEoAAAAbAAAA",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAkwDAAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T18:37:22.227Z",
+              "WhenOpened": "2024-04-01T06:02:14.686Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PowerupManager.cs",
-              "DocumentMoniker": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\PowerupManager.cs",
-              "RelativeDocumentMoniker": "PowerupManager.cs",
-              "ToolTip": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\PowerupManager.cs",
-              "RelativeToolTip": "PowerupManager.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAgwDsAAAAgAAAA",
+              "Title": "Game1.cs",
+              "DocumentMoniker": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\Game1.cs",
+              "RelativeDocumentMoniker": "Game1.cs",
+              "ToolTip": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\Game1.cs",
+              "RelativeToolTip": "Game1.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwCAAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T18:34:07.066Z",
+              "WhenOpened": "2024-04-01T06:00:35.439Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BlockManager.cs",
-              "DocumentMoniker": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\BlockManager.cs",
-              "RelativeDocumentMoniker": "BlockManager.cs",
-              "ToolTip": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\BlockManager.cs",
-              "RelativeToolTip": "BlockManager.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAmwDIAAAAAAAAA",
+              "DocumentIndex": 6,
+              "Title": "ButtonText.cs",
+              "DocumentMoniker": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\Levels\\ButtonText.cs",
+              "RelativeDocumentMoniker": "Levels\\ButtonText.cs",
+              "ToolTip": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\Levels\\ButtonText.cs",
+              "RelativeToolTip": "Levels\\ButtonText.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAmwB4AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T18:33:39.002Z",
+              "WhenOpened": "2024-04-01T03:58:42.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GameButton.cs",
+              "DocumentMoniker": "C:\\Users\\nemo1\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\Levels\\GameButton.cs",
+              "RelativeDocumentMoniker": "Levels\\GameButton.cs",
+              "ToolTip": "C:\\Users\\nemo1\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\Levels\\GameButton.cs",
+              "RelativeToolTip": "Levels\\GameButton.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAIwCYAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T03:56:16.441Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\Levels\\MainMenu.cs",
+              "RelativeDocumentMoniker": "Levels\\MainMenu.cs",
+              "ToolTip": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\Levels\\MainMenu.cs",
+              "RelativeToolTip": "Levels\\MainMenu.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACsAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T03:51:46.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ButtonHandler.cs",
+              "DocumentMoniker": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\Levels\\ButtonHandler.cs",
+              "RelativeDocumentMoniker": "Levels\\ButtonHandler.cs",
+              "ToolTip": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\Levels\\ButtonHandler.cs",
+              "RelativeToolTip": "Levels\\ButtonHandler.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA8AAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T05:07:27.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Level.cs",
+              "DocumentMoniker": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\Levels\\Level.cs",
+              "RelativeDocumentMoniker": "Levels\\Level.cs",
+              "ToolTip": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\Levels\\Level.cs",
+              "RelativeToolTip": "Levels\\Level.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAwB0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T03:48:30.669Z",
               "EditorCaption": ""
             }
           ]

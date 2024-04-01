@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using BreakOut.Levels;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -22,7 +23,8 @@ namespace BreakOut
         {
             // TODO: Add your initialization logic here
 
-            Components.Add(new GameHandler(this));
+            //Components.Add(new GameHandler(this));
+            Components.Add(new MainMenu(this));
             base.Initialize();
         }
 

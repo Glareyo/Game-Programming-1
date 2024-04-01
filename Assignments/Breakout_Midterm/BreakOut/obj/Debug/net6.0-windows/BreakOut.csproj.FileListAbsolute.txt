@@ -116,3 +116,11 @@ C:\Users\cedillo02\Source\Repos\Glareyo\Game-Programming-1\Assignments\Breakout_
 C:\Users\cedillo02\Source\Repos\Glareyo\Game-Programming-1\Assignments\Breakout_Midterm\BreakOut\obj\Debug\net6.0-windows\BreakOut.pdb
 C:\Users\cedillo02\Source\Repos\Glareyo\Game-Programming-1\Assignments\Breakout_Midterm\BreakOut\obj\Debug\net6.0-windows\BreakOut.genruntimeconfig.cache
 C:\Users\cedillo02\Source\Repos\Glareyo\Game-Programming-1\Assignments\Breakout_Midterm\BreakOut\obj\Debug\net6.0-windows\ref\BreakOut.dll
+C:\Users\nemo1\source\repos\Glareyo\Game-Programming-1\Assignments\Breakout_Midterm\BreakOut\bin\Debug\net6.0-windows\Content\ScoreBoardFont.xnb
+C:\Users\nemo1\Source\Repos\Glareyo\Game-Programming-1\Assignments\Breakout_Midterm\BreakOut\bin\Debug\net6.0-windows\Content\buttons\test.xnb
+C:\Users\nemo1\Source\Repos\Glareyo\Game-Programming-1\Assignments\Breakout_Midterm\BreakOut\bin\Debug\net6.0-windows\Content\buttons\ButtonClicked.xnb
+C:\Users\nemo1\Source\Repos\Glareyo\Game-Programming-1\Assignments\Breakout_Midterm\BreakOut\bin\Debug\net6.0-windows\Content\buttons\ButtonHover.xnb
+C:\Users\nemo1\Source\Repos\Glareyo\Game-Programming-1\Assignments\Breakout_Midterm\BreakOut\bin\Debug\net6.0-windows\Content\buttons\ButtonIdle.xnb
+C:\Users\nemo1\Source\Repos\Glareyo\Game-Programming-1\Assignments\Breakout_Midterm\BreakOut\bin\Debug\net6.0-windows\Content\buttons\ButtonText\Exit.xnb
+C:\Users\nemo1\Source\Repos\Glareyo\Game-Programming-1\Assignments\Breakout_Midterm\BreakOut\bin\Debug\net6.0-windows\Content\buttons\ButtonText\Start.xnb
+C:\Users\nemo1\Source\Repos\Glareyo\Game-Programming-1\Assignments\Breakout_Midterm\BreakOut\bin\Debug\net6.0-windows\Content\buttons\ButtonText\Tutorial.xnb

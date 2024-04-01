@@ -95,6 +95,7 @@ namespace BreakOut
         public override void Hit()
         {
             animInterval = 0;
+            currentFrame = 0;
             base.Hit();
         }
 

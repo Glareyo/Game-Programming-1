@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using BreakOut.Levels;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using MonoGameLibrary.Util;
 using System;
@@ -6,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BreakOut
 {
@@ -19,6 +21,8 @@ namespace BreakOut
         PowerupManager powerupManager;
         BallManager ballManager;
 
+        ScoreBoard scoreBoard;
+
         GameConsole console;
 
         public GameHandler(Game game) : base(game)
@@ -27,7 +31,7 @@ namespace BreakOut
             if (console == null)
             {
                 console = new GameConsole(this.Game);
-                Game.Components.Add(console);
+                //Game.Components.Add(console);
             }
         }
 
@@ -40,10 +44,13 @@ namespace BreakOut
             powerupManager = new PowerupManager(Game);
             ballManager = new BallManager(Game,ball);
 
+            scoreBoard = new ScoreBoard(Game);
+
             Game.Components.Add(ball);
             Game.Components.Add(paddle);
             Game.Components.Add(blockManager);
             Game.Components.Add(powerupManager);
+            Game.Components.Add(scoreBoard);
 
             base.Initialize();
         }
@@ -62,21 +69,29 @@ namespace BreakOut
             for(int i = 0; i < ballManager.balls.Count; i++)
             {
                 ball = ballManager.balls[i];
-                foreach (Invader block in blockManager.Invaders)
+                foreach (Invader invader in blockManager.Invaders)
                 {
-                    if (ball.Intersects(block) && block.BlockState != BlockState.Broken)
+                    if (ball.Intersects(invader) && invader.BlockState != BlockState.Broken)
                     {
-                        blockManager.BlockIsHit(block);
+                        blockManager.BlockIsHit(invader);
                         ball.Direction.Y *= -1;
+                        
+                        //Updated Scoreboard
+                        if (invader.BlockState == BlockState.Broken)
+                        {
+                            scoreBoard.InvaderDestroyed();
+                        }
                     }
                 }
                 foreach (Powerup power in powerupManager.Powerups)
                 {
                     if (ball.Intersects(power) && power.State == PowerUpState.Idle)
                     {
-                        console.GameConsoleWrite($"Powerup Hit");
                         powerupManager.PowerupIsHit(power);
                         ballManager.PowerUpBall(ball, power);
+
+                        //Updated Scoreboard
+                        scoreBoard.PowerupCollected();
                     }
                 }
                 if (ball.Intersects(paddle))
