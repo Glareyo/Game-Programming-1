@@ -13,7 +13,6 @@ namespace BreakOut.Levels
     {
         public List<GameButton> buttons;
         int currentSelect;
-        public GameButton ButtonSelected;
 
         /// <summary>
         /// Margin Between Buttons
@@ -30,7 +29,6 @@ namespace BreakOut.Levels
         public ButtonHandler(Game game) : base(game)
         {
             buttons = new List<GameButton>();
-            ButtonSelected = null;
             margin = 0;
             ButtonLocation = Vector2.Zero;
             currentSelect = 0;
@@ -41,6 +39,7 @@ namespace BreakOut.Levels
         public override void Initialize()
         {
             SetButtonLocations();
+            buttons[0].Hover();
             base.Initialize();
         }
 

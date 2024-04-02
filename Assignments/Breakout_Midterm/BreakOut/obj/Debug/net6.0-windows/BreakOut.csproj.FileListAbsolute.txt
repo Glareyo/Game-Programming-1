@@ -124,3 +124,5 @@ C:\Users\nemo1\Source\Repos\Glareyo\Game-Programming-1\Assignments\Breakout_Midt
 C:\Users\nemo1\Source\Repos\Glareyo\Game-Programming-1\Assignments\Breakout_Midterm\BreakOut\bin\Debug\net6.0-windows\Content\buttons\ButtonText\Exit.xnb
 C:\Users\nemo1\Source\Repos\Glareyo\Game-Programming-1\Assignments\Breakout_Midterm\BreakOut\bin\Debug\net6.0-windows\Content\buttons\ButtonText\Start.xnb
 C:\Users\nemo1\Source\Repos\Glareyo\Game-Programming-1\Assignments\Breakout_Midterm\BreakOut\bin\Debug\net6.0-windows\Content\buttons\ButtonText\Tutorial.xnb
+C:\Users\nemo1\Source\Repos\Glareyo\Game-Programming-1\Assignments\Breakout_Midterm\BreakOut\bin\Debug\net6.0-windows\Content\buttons\ButtonText\Next Level.xnb
+C:\Users\nemo1\Source\Repos\Glareyo\Game-Programming-1\Assignments\Breakout_Midterm\BreakOut\bin\Debug\net6.0-windows\Content\FinalScoreFont.xnb

@@ -66,9 +66,9 @@ namespace BreakOut
             p.Location = new Vector2(random.Next(15,vp.Width-15), random.Next(15,vp.Height/2));
             p.Type = PowerUpType.Duplicate;
             //p.Type = GenerateType();
-
-            Game.Components.Add(p);
+            
             Powerups.Add(p);
+            Game.Components.Add(p);
         }
         PowerUpType GenerateType()
         {
@@ -87,6 +87,14 @@ namespace BreakOut
             }
 
             return PowerUpType.Duplicate;
+        }
+
+        public void ClearComponents()
+        {
+            foreach(Powerup p in Powerups)
+            {
+                p.RemoveSelf();
+            }
         }
     }
 }

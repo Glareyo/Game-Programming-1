@@ -14,7 +14,7 @@ namespace BreakOut.Levels
     public class GameButton : DrawableSprite
     {
         ButtonText text;
-        GameButtonState State;
+        public GameButtonState State;
 
         public GameButton(Game game, string buttonText) : base(game)
         {
@@ -52,6 +52,14 @@ namespace BreakOut.Levels
         public void Clicked()
         {
             State = GameButtonState.Clicked;
+        }
+        public bool IsClicked()
+        {
+            if (State == GameButtonState.Clicked)
+            {
+                return true;
+            }
+            return false;
         }
 
         public override void Update(GameTime gameTime)

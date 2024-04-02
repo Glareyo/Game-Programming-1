@@ -47,5 +47,13 @@ namespace BreakOut
 
             b.LaunchBall();
         }
+
+        public void ClearComponents()
+        {
+            foreach(Ball b in balls) 
+            {
+                Game.Components.Remove(b);
+            }
+        }
     }
 }

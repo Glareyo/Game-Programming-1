@@ -16,10 +16,14 @@ namespace BreakOut.Levels
         public GameButtonState State;
         public GameButton Button;
 
+        private Texture2D ButtonSprite;
+
         public ButtonText(Game game, GameButton _button, string _Words) : base(game)
         {
             Words = _Words;
             Button = _button;
+
+            ButtonSprite = game.Content.Load<Texture2D>("buttons/ButtonIdle");
         }
 
         public void SetText()
@@ -27,7 +31,7 @@ namespace BreakOut.Levels
             //Center text
             this.Origin = new Vector2(this.SpriteTexture.Width / 2, this.SpriteTexture.Height / 2);
             //Set Location based on where the button is.
-            this.Location = new Vector2(Button.Location.X + Button.SpriteTexture.Width / 2, Button.Location .Y + Button.SpriteTexture.Height / 2);
+            this.Location = new Vector2(Button.Location.X + ButtonSprite.Width / 2, Button.Location .Y + ButtonSprite.Height / 2);
             //Set the draw order
             this.DrawOrder = 0;
         }

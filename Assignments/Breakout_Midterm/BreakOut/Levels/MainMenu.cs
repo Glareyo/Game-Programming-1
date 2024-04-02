@@ -11,9 +11,10 @@ namespace BreakOut.Levels
     {
         ButtonHandler buttonHandler;
 
-        GameButton StartButton;
-        GameButton TutorialButton;
-        GameButton ExitButton;
+        public GameButton StartButton;
+        public GameButton TutorialButton;
+        public GameButton ExitButton;
+
         public MainMenu(Game game) : base(game)
         {
             buttonHandler = new ButtonHandler(game);
@@ -32,14 +33,22 @@ namespace BreakOut.Levels
 
         public override void Initialize()
         {
-            buttonHandler.AddButtonsToGame();
-            StartLevel();
             base.Initialize();
+        }
+
+        public override void StartLevel()
+        {
+            buttonHandler.AddButtonsToGame();
+            base.StartLevel();
         }
 
         public override void Update(GameTime gameTime)
         {
-            if (buttonHandler.ButtonSelected == ExitButton) 
+            if (StartButton.IsClicked())
+            {
+                this.DisableLevel();
+            }
+            else if (ExitButton.IsClicked()) 
             {
                 Game.Exit();
             }

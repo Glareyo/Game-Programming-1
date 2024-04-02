@@ -18,8 +18,7 @@ namespace BreakOut
 {
     class Paddle : DrawableSprite
     {
-        //Service Dependencies
-        GameConsole console;
+        
 
         //Dependencies
         PaddleController controller;
@@ -32,13 +31,7 @@ namespace BreakOut
             this.ball = b;
             controller = new PaddleController(game, ball);
 
-            //Lazy load GameConsole
-            console = (GameConsole)this.Game.Services.GetService(typeof(IGameConsole));
-            if (console == null) //ohh no no console make a new one and add it to the game
-            {
-                console = new GameConsole(this.Game);
-                this.Game.Components.Add(console);  //add a new game console to Game
-            }
+            
         }
 
         protected override void LoadContent()

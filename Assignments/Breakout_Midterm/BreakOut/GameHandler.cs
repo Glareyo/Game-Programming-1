@@ -1,104 +1,85 @@
 ﻿using BreakOut.Levels;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using MonoGameLibrary.Util;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace BreakOut
 {
     public class GameHandler : GameComponent
     {
-        Ball ball;
-        Paddle paddle;
-        PaddleController paddleController;
+        LevelHandler levelHandler;
 
-        BlockManager blockManager;
-        PowerupManager powerupManager;
-        BallManager ballManager;
+        MainMenu mainMenu;
+        InvaderLevel level1;
 
-        ScoreBoard scoreBoard;
-
-        GameConsole console;
+        CompletedLevel levelComplete;
 
         public GameHandler(Game game) : base(game)
         {
-            console = (GameConsole)this.Game.Services.GetService<IGameConsole>();
-            if (console == null)
-            {
-                console = new GameConsole(this.Game);
-                //Game.Components.Add(console);
-            }
+            mainMenu = new MainMenu(game);
+
+            levelHandler = new LevelHandler(game, mainMenu);
+
+            Game.Components.Add(levelHandler);
+        }
+
+        public void StartGame()
+        {
+            levelHandler.BeginCurrentLevel();
         }
 
         public override void Initialize()
         {
-            ball = new Ball(Game);
-            paddle = new Paddle(Game, ball);
-            paddleController = new PaddleController(Game, ball);
-            blockManager = new BlockManager(Game);
-            powerupManager = new PowerupManager(Game);
-            ballManager = new BallManager(Game,ball);
-
-            scoreBoard = new ScoreBoard(Game);
-
-            Game.Components.Add(ball);
-            Game.Components.Add(paddle);
-            Game.Components.Add(blockManager);
-            Game.Components.Add(powerupManager);
-            Game.Components.Add(scoreBoard);
-
             base.Initialize();
+            StartGame();
         }
 
         public override void Update(GameTime gameTime)
         {
-            paddleController.HandleInput(gameTime);
-            CheckForBallCollision();
-
+            CheckLevelStatus();
             base.Update(gameTime);
         }
 
-
-        void CheckForBallCollision()
+        void CheckLevelStatus()
         {
-            for(int i = 0; i < ballManager.balls.Count; i++)
+            if (levelHandler.GetCurrentLevel.State == LevelState.Disabled) 
             {
-                ball = ballManager.balls[i];
-                foreach (Invader invader in blockManager.Invaders)
-                {
-                    if (ball.Intersects(invader) && invader.BlockState != BlockState.Broken)
-                    {
-                        blockManager.BlockIsHit(invader);
-                        ball.Direction.Y *= -1;
-                        
-                        //Updated Scoreboard
-                        if (invader.BlockState == BlockState.Broken)
-                        {
-                            scoreBoard.InvaderDestroyed();
-                        }
-                    }
-                }
-                foreach (Powerup power in powerupManager.Powerups)
-                {
-                    if (ball.Intersects(power) && power.State == PowerUpState.Idle)
-                    {
-                        powerupManager.PowerupIsHit(power);
-                        ballManager.PowerUpBall(ball, power);
+                ChangeLevel(levelHandler.GetCurrentLevel);
+            }
+        }
 
-                        //Updated Scoreboard
-                        scoreBoard.PowerupCollected();
-                    }
-                }
-                if (ball.Intersects(paddle))
+        void ChangeLevel(Level currentLevel)
+        {
+            if (currentLevel == mainMenu)
+            {
+                if (mainMenu.StartButton.IsClicked())
                 {
-                    ball.Direction.Y *= -1;
+                    level1 = new InvaderLevel(Game, 1, 0);
+                    levelHandler.NextLevel(level1);
+                }
+                else if (mainMenu.TutorialButton.IsClicked())
+                {
+                    Game.Exit();
+                }
+                else if (mainMenu.ExitButton.IsClicked())
+                {
+                    Game.Exit();
                 }
             }
+            else if (currentLevel == level1)
+            {
+                levelComplete = new CompletedLevel(Game, level1.Scoreboard);
+                levelHandler.NextLevel(levelComplete);
+            }
+            else if (currentLevel == levelComplete)
+            {
+                mainMenu = new MainMenu(Game);
+                levelHandler.NextLevel(mainMenu);
+            }
+
         }
     }
 }

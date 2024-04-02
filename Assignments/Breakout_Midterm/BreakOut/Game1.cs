@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Collections.Generic;
 
 namespace BreakOut
 {
@@ -9,8 +10,6 @@ namespace BreakOut
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-
-        
 
         public Game1()
         {
@@ -23,8 +22,7 @@ namespace BreakOut
         {
             // TODO: Add your initialization logic here
 
-            //Components.Add(new GameHandler(this));
-            Components.Add(new MainMenu(this));
+            Components.Add(new GameHandler(this));
             base.Initialize();
         }
 

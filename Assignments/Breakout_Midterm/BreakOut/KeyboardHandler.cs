@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
+using MonoGameLibrary.Util;
 
 //Credit: Jeff Meyers
 // Provided lecture and course materials
@@ -18,8 +19,7 @@ namespace BreakOut
 
         static private KeyboardState prevKeyboardState;
         static private KeyboardState keyboardState;
-
-
+        
         static public bool IsKeyDown(Keys key)
         {
             return (keyboardState.IsKeyDown(key));

@@ -29,6 +29,12 @@ namespace BreakOut
 
         int fontMargin = 15;
 
+        public int GetScore { get { return currentScore; } }
+        public double GetTime { get { return currentTime; } }
+        public int GetInvadersDestroyed { get { return currentInvadersDestroyed; } }
+        public int GetPowerupsCollected { get { return currentPowerupsCollected; } }
+
+
         public ScoreBoard(Game game) : base(game)
         {
 

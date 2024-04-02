@@ -97,6 +97,18 @@
 /processorParam:TextureFormat=Color
 /build:buttons/ButtonText/Exit.png
 
+#begin buttons/ButtonText/Next Level.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:buttons/ButtonText/Next Level.png
+
 #begin buttons/ButtonText/Start.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -132,6 +144,13 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:buttons/test.png
+
+#begin FinalScoreFont.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:FinalScoreFont.spritefont
 
 #begin paddleSmall.png
 /importer:TextureImporter
