@@ -3,8 +3,11 @@
     "",
     "\\Assignments",
     "\\Assignments\\Breakout_Midterm",
-    "\\Assignments\\Breakout_Midterm\\BreakOut"
+    "\\Assignments\\Breakout_Midterm\\BreakOut",
+    "\\Assignments\\Breakout_Midterm\\BreakOut\\Levels",
+    "\\Assignments\\Breakout_Midterm\\MonoGameLibrary",
+    "\\Assignments\\Breakout_Midterm\\MonoGameLibrary\\Sprite"
   ],
-  "SelectedNode": "\\Assignments\\Breakout_Midterm\\BreakOut\\BreakOut.sln",
+  "SelectedNode": "\\Assignments\\Breakout_Midterm\\MonoGameLibrary\\Sprite\\Sprite.cs",
   "PreviewInSolutionExplorer": false
 }

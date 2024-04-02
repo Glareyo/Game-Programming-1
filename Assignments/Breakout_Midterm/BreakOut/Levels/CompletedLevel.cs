@@ -15,10 +15,10 @@ namespace BreakOut.Levels
         GameButton NextButton;
         ButtonHandler bh;
 
-        public CompletedLevel(Game game) : base(game)
+        public CompletedLevel(Game game,string _name) : base(game, _name)
         {
         }
-        public CompletedLevel(Game game,ScoreBoard _scoreBoard) : base(game)
+        public CompletedLevel(Game game, string _name, ScoreBoard _scoreBoard) : base(game, _name)
         {
             score = new DisplayScore(game, GetScoreString(_scoreBoard));
             NextButton = new GameButton(game, "Next Level");

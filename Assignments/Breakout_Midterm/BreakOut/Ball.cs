@@ -54,7 +54,14 @@ namespace BreakOut
             this.State = BallState.Playing;
         }
 
-        private void resetBall(GameTime gameTime)
+        public void LaunchBall(Vector2 _Direction)
+        {
+            this.Speed = 190;
+            this.Direction = _Direction;
+            this.State = BallState.Playing;
+        }
+
+        public void resetBall(GameTime gameTime)
         {
             this.Speed = 0;
             this.State = BallState.OnPaddleStart;

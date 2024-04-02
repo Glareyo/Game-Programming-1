@@ -11,17 +11,18 @@ namespace BreakOut.Levels
     {
         int numSmallUFOs;
         int numLargeUFOs;
-        GamePlayHandler gameHandler;
+        GamePlayHandler gamePlayHandler;
 
         public ScoreBoard Scoreboard { get; private set; }
 
-        public InvaderLevel(Game game, int _numSmallUFOs, int _numLargeUFOS) : base(game)
+        public InvaderLevel(Game game, string _name, int _numSmallUFOs, int _numLargeUFOS) : base(game,_name)
         {
+            levelName = _name;
             numSmallUFOs = _numSmallUFOs;
             numLargeUFOs = _numLargeUFOS;
 
-            gameHandler = new GamePlayHandler(Game, numSmallUFOs, numLargeUFOs);
-            LevelComponents.Add(gameHandler);
+            gamePlayHandler = new GamePlayHandler(Game, numSmallUFOs, numLargeUFOs);
+            LevelComponents.Add(gamePlayHandler);
         }
 
         public override void Initialize()
@@ -33,11 +34,11 @@ namespace BreakOut.Levels
         {
 
             //All Invaders destroyed and no more spawning
-            if (gameHandler.State == GamePlayState.Disabled)
+            if (gamePlayHandler.State == GamePlayState.Disabled)
             {
-                Scoreboard = gameHandler.GetScoreBoard;
+                Scoreboard = gamePlayHandler.GetScoreBoard;
                 DisableLevel();
-                gameHandler.ClearComponents(); 
+                gamePlayHandler.ClearComponents(); 
             }
             base.Update(gameTime);
         }

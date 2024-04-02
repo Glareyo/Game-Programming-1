@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Wk4HW_LargeSingleColorSprite")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a714a69905f6c3536a985bf347f2048714e3feb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e4ff891fd0ce00e0b4a107cafa96083b76919b7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Wk4HW_LargeSingleColorSprite")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Wk4HW_LargeSingleColorSprite")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

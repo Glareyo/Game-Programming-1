@@ -17,8 +17,12 @@ namespace BreakOut.Levels
         public List<IGameComponent> LevelComponents;
         public LevelState State { get; set; }
 
-        public Level(Game game) : base(game)
+        protected string levelName;
+        public string Name { get { return levelName; } }
+
+        public Level(Game game, string _name) : base(game)
         {
+            levelName = _name;
             State = LevelState.Disabled;
             LevelComponents = new List<IGameComponent>();
         }

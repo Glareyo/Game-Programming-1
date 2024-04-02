@@ -12,18 +12,29 @@ namespace BreakOut
     {
         LevelHandler levelHandler;
 
-        MainMenu mainMenu;
-        InvaderLevel level1;
+        List<Level> allLevels;
 
-        CompletedLevel levelComplete;
+        int levelIndex;
 
         public GameHandler(Game game) : base(game)
         {
-            mainMenu = new MainMenu(game);
+            levelIndex = 0;
 
-            levelHandler = new LevelHandler(game, mainMenu);
+            ResetLevels();
+
+            levelHandler = new LevelHandler(game, allLevels[0]);
 
             Game.Components.Add(levelHandler);
+        }
+
+        public void ResetLevels()
+        {
+            allLevels = new List<Level>();
+
+            allLevels.Add(new MainMenu(Game, "mainMenu"));
+            allLevels.Add(new InvaderLevel(Game, "level1", 1, 0));
+            allLevels.Add(new InvaderLevel(Game, "level2", 2, 0));
+            allLevels.Add(new InvaderLevel(Game, "level3", 30, 0));
         }
 
         public void StartGame()
@@ -51,35 +62,48 @@ namespace BreakOut
             }
         }
 
-        void ChangeLevel(Level currentLevel)
+        Level GetNextLevel()
         {
-            if (currentLevel == mainMenu)
+            levelIndex++;
+            if (levelIndex >= allLevels.Count)
             {
-                if (mainMenu.StartButton.IsClicked())
-                {
-                    level1 = new InvaderLevel(Game, 1, 0);
-                    levelHandler.NextLevel(level1);
-                }
-                else if (mainMenu.TutorialButton.IsClicked())
-                {
-                    Game.Exit();
-                }
-                else if (mainMenu.ExitButton.IsClicked())
-                {
-                    Game.Exit();
-                }
-            }
-            else if (currentLevel == level1)
-            {
-                levelComplete = new CompletedLevel(Game, level1.Scoreboard);
-                levelHandler.NextLevel(levelComplete);
-            }
-            else if (currentLevel == levelComplete)
-            {
-                mainMenu = new MainMenu(Game);
-                levelHandler.NextLevel(mainMenu);
+                levelIndex = 0;
+                ResetLevels();
             }
 
+            return allLevels[levelIndex];
+        }
+
+        CompletedLevel ShowCompletedLevel(InvaderLevel level)
+        {
+            return new CompletedLevel(Game, "completedLevel", level.Scoreboard);
+        }
+
+        void ChangeLevel(Level currentLevel)
+        {
+            if (currentLevel.Name == "mainMenu")
+            {
+                if ((currentLevel as MainMenu).StartButton.IsClicked())
+                {
+                    levelHandler.NextLevel(GetNextLevel());
+                }
+                else if ((currentLevel as MainMenu).TutorialButton.IsClicked())
+                {
+                    Game.Exit();
+                }
+                else if ((currentLevel as MainMenu).ExitButton.IsClicked())
+                {
+                    Game.Exit();
+                }
+            }
+            else if (currentLevel is InvaderLevel) //Credit: Jeff Meyers. Showed how to check the Instance type of an instance.
+            {
+                levelHandler.NextLevel(ShowCompletedLevel(currentLevel as InvaderLevel));
+            }
+            else 
+            {
+                levelHandler.NextLevel(GetNextLevel()); 
+            }
         }
     }
 }

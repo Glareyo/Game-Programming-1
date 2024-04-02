@@ -15,7 +15,7 @@ namespace BreakOut.Levels
         public GameButton TutorialButton;
         public GameButton ExitButton;
 
-        public MainMenu(Game game) : base(game)
+        public MainMenu(Game game, string _name) : base(game, _name)
         {
             buttonHandler = new ButtonHandler(game);
 
