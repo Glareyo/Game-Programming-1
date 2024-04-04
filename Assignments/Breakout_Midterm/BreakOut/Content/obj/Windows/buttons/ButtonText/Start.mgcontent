@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/nemo1/source/repos/Glareyo/Game-Programming-1/Assignments/Breakout_Midterm/BreakOut/Content/buttons/ButtonText/Start.png</SourceFile>
-  <SourceTime>2024-04-01T00:16:59.9330076-05:00</SourceTime>
-  <DestFile>C:/Users/nemo1/source/repos/Glareyo/Game-Programming-1/Assignments/Breakout_Midterm/BreakOut/Content/bin/Windows/buttons/ButtonText/Start.xnb</DestFile>
-  <DestTime>2024-04-01T00:19:02.7024868-05:00</DestTime>
+  <SourceFile>C:/Users/cedillo02/Source/Repos/Glareyo/Game-Programming-1/Assignments/Breakout_Midterm/BreakOut/Content/buttons/ButtonText/Start.png</SourceFile>
+  <SourceTime>2024-04-04T15:48:35.9675533-05:00</SourceTime>
+  <DestFile>C:/Users/cedillo02/Source/Repos/Glareyo/Game-Programming-1/Assignments/Breakout_Midterm/BreakOut/Content/bin/Windows/buttons/ButtonText/Start.xnb</DestFile>
+  <DestTime>2024-04-04T16:13:15.8339381-05:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T06:44:56-05:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

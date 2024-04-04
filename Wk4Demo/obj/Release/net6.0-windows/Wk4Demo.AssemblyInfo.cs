@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Wk4Demo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e4ff891fd0ce00e0b4a107cafa96083b76919b7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a0b1e2653194ff4da0b3ef47cae85ff0108da1e3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Wk4Demo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Wk4Demo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

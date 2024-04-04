@@ -32,9 +32,9 @@ namespace BreakOut
             allLevels = new List<Level>();
 
             allLevels.Add(new MainMenu(Game, "mainMenu"));
-            allLevels.Add(new InvaderLevel(Game, "level1", 1, 0));
-            allLevels.Add(new InvaderLevel(Game, "level2", 2, 0));
-            allLevels.Add(new InvaderLevel(Game, "level3", 30, 0));
+            allLevels.Add(new InvaderLevel(Game, "Level 1", 1, 0));
+            allLevels.Add(new InvaderLevel(Game, "Level 2", 2, 0));
+            allLevels.Add(new InvaderLevel(Game, "Level 3", 30, 0));
         }
 
         public void StartGame()
@@ -73,6 +73,17 @@ namespace BreakOut
 
             return allLevels[levelIndex];
         }
+        Level RestartLevel()
+        {
+            ResetLevels();
+            return allLevels[levelIndex];
+        }
+        Level BackToMainMenu()
+        {
+            levelIndex = 0;
+            ResetLevels();
+            return allLevels[levelIndex];
+        }
 
         CompletedLevel ShowCompletedLevel(InvaderLevel level)
         {
@@ -98,7 +109,30 @@ namespace BreakOut
             }
             else if (currentLevel is InvaderLevel) //Credit: Jeff Meyers. Showed how to check the Instance type of an instance.
             {
-                levelHandler.NextLevel(ShowCompletedLevel(currentLevel as InvaderLevel));
+                if ((currentLevel as InvaderLevel).InvadersDestroyed())
+                {
+                    levelHandler.NextLevel(ShowCompletedLevel(currentLevel as InvaderLevel));
+                }
+                else if ((currentLevel as InvaderLevel).BallsAreDestroyed())
+                {
+                    levelHandler.NextLevel(new GameOverLevel(Game,"Game Over"));
+                }
+            }
+            else if (currentLevel is GameOverLevel)
+            {
+                GameOverLevel l = currentLevel as GameOverLevel;
+                if (l.RestartLevelButton.IsClicked())
+                {
+                    levelHandler.NextLevel(RestartLevel());
+                }
+                else if (l.MainMenuButton.IsClicked())
+                {
+                    levelHandler.NextLevel(BackToMainMenu());
+                }
+                else if (l.ExitButton.IsClicked())
+                {
+                    Game.Exit();
+                }
             }
             else 
             {

@@ -183,5 +183,13 @@ namespace BreakOut
             }
             return false;
         }
+
+        public void ClearComponents()
+        {
+            foreach(Invader invader in Invaders)
+            {
+                Game.Components.Remove(invader);
+            }
+        }
     }
 }

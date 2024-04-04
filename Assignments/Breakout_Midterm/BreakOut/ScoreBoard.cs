@@ -26,6 +26,7 @@ namespace BreakOut
         string timeString;
         string invadersDestroyedString;
         string powerupsCollectedString;
+        string levelString;
 
         int fontMargin = 15;
 
@@ -35,9 +36,9 @@ namespace BreakOut
         public int GetPowerupsCollected { get { return currentPowerupsCollected; } }
 
 
-        public ScoreBoard(Game game) : base(game)
+        public ScoreBoard(Game game, string levelString) : base(game)
         {
-
+            this.levelString = levelString;
         }
 
         public override void Initialize()
@@ -101,6 +102,7 @@ namespace BreakOut
             sb.DrawString(scoreBoardFont,timeString, new Vector2(10,fontMargin*2),Microsoft.Xna.Framework.Color.Black);
             sb.DrawString(scoreBoardFont,invadersDestroyedString, new Vector2(10,fontMargin*3),Microsoft.Xna.Framework.Color.Black);
             sb.DrawString(scoreBoardFont, powerupsCollectedString, new Vector2(10,fontMargin*4),Microsoft.Xna.Framework.Color.Black);
+            sb.DrawString(scoreBoardFont, levelString, new Vector2(10,fontMargin*5),Microsoft.Xna.Framework.Color.Black);
             sb.End();
             base.Draw(gameTime);
         }

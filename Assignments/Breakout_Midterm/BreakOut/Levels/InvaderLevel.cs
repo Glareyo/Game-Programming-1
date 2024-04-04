@@ -21,7 +21,7 @@ namespace BreakOut.Levels
             numSmallUFOs = _numSmallUFOs;
             numLargeUFOs = _numLargeUFOS;
 
-            gamePlayHandler = new GamePlayHandler(Game, numSmallUFOs, numLargeUFOs);
+            gamePlayHandler = new GamePlayHandler(Game, this, numSmallUFOs, numLargeUFOs);
             LevelComponents.Add(gamePlayHandler);
         }
 
@@ -41,6 +41,15 @@ namespace BreakOut.Levels
                 gamePlayHandler.ClearComponents(); 
             }
             base.Update(gameTime);
+        }
+
+        public bool InvadersDestroyed()
+        {
+            return gamePlayHandler.InvadersDestroyed();
+        }
+        public bool BallsAreDestroyed()
+        {
+            return gamePlayHandler.BallsAreDestroyed();
         }
     }
 }

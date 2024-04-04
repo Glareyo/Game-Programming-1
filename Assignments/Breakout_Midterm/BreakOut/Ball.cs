@@ -18,7 +18,7 @@ namespace BreakOut
 {
     public class Ball : DrawableSprite
     {
-        public enum BallState { OnPaddleStart,Playing};
+        public enum BallState { OnPaddleStart,Playing, Destroyed};
         public BallState State;
 
         public Ball(Game game) : base(game)
@@ -97,7 +97,8 @@ namespace BreakOut
             //bottom Miss
             if (this.Location.Y + this.spriteTexture.Height > this.Game.GraphicsDevice.Viewport.Height)
             {
-                this.Direction.Y *= -1;
+                State = BallState.Destroyed;
+                Visible = false;
             }
 
             //Top

@@ -22,6 +22,8 @@ namespace BreakOut
     {
         List<IGameComponent> GameplayComponents;
 
+        InvaderLevel level;
+
         Ball ball;
         Paddle paddle;
         PaddleController paddleController;
@@ -39,31 +41,22 @@ namespace BreakOut
 
         public GamePlayState State { get; private set; }
 
-        //Service Dependencies
-        GameConsole console;
-
         /// <summary>
         /// Create Gameplay with set enemies
         /// </summary>
         /// <param name="gamem"></param>
         /// <param name="_numOfSmallInvaders">Number of Small Invaders</param>
         /// <param name="_numOfLargeInvaders">Number of Large Invaders</param>
-        public GamePlayHandler(Game game, int _numOfSmallInvaders, int _numOfLargeInvaders) : base(game)
+        public GamePlayHandler(Game game, InvaderLevel level, int _numOfSmallInvaders, int _numOfLargeInvaders) : base(game)
         {
             GameplayComponents = new List<IGameComponent>();
 
             numOfSmallInvaders = _numOfSmallInvaders;
             numOfLargeInvaders = _numOfLargeInvaders;
 
-            State = GamePlayState.Runnning;
+            this.level = level;
 
-            //Lazy load GameConsole
-            console = (GameConsole)this.Game.Services.GetService(typeof(IGameConsole));
-            if (console == null) //ohh no no console make a new one and add it to the game
-            {
-                console = new GameConsole(this.Game);
-                this.Game.Components.Add(console);  //add a new game console to Game
-            }
+            State = GamePlayState.Runnning;
         }
 
         public override void Initialize()
@@ -78,13 +71,14 @@ namespace BreakOut
             powerupManager = new PowerupManager(Game);
             ballManager = new BallManager(Game,ball);
 
-            scoreBoard = new ScoreBoard(Game);
+            scoreBoard = new ScoreBoard(Game, level.Name);
 
 
 
             GameplayComponents.Add(ball);
             GameplayComponents.Add(paddle);
             GameplayComponents.Add(blockManager);
+            GameplayComponents.Add(ballManager);
             GameplayComponents.Add(powerupManager);
             GameplayComponents.Add(scoreBoard);
 
@@ -112,17 +106,27 @@ namespace BreakOut
             paddleController.HandleInput(gameTime);
             CheckForBallCollision();
             //Disable the gameplay if all invaders are destroyed
-            if (InvadersDestroyed())
+            if (InvadersDestroyed() || BallsAreDestroyed())
             {
                 this.State = GamePlayState.Disabled;
                 ballManager.ClearComponents();
                 powerupManager.ClearComponents();
+                blockManager.ClearComponents();
             }
 
             base.Update(gameTime);
         }
 
-        bool InvadersDestroyed()
+        public bool BallsAreDestroyed()
+        {
+            if (ballManager.State == BallManagerState.Stopped)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public bool InvadersDestroyed()
         {
             if (blockManager.State == BlockManagerState.OutOfInvaders)
             {
