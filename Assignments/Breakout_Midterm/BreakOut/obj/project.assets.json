@@ -7548,23 +7548,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nemo1\\.nuget\\packages\\": {},
+    "C:\\Users\\cedillo02\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nemo1\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\BreakOut.csproj",
+      "projectUniqueName": "C:\\Users\\cedillo02\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\BreakOut.csproj",
       "projectName": "BreakOut",
-      "projectPath": "C:\\Users\\nemo1\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\BreakOut.csproj",
-      "packagesPath": "C:\\Users\\nemo1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nemo1\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\obj\\",
+      "projectPath": "C:\\Users\\cedillo02\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\BreakOut.csproj",
+      "packagesPath": "C:\\Users\\cedillo02\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cedillo02\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\BreakOut\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\nemo1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\cedillo02\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -7580,8 +7580,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\nemo1\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\MonoGameLibrary\\MonoGameLibrary.csproj": {
-              "projectPath": "C:\\Users\\nemo1\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\MonoGameLibrary\\MonoGameLibrary.csproj"
+            "C:\\Users\\cedillo02\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\MonoGameLibrary\\MonoGameLibrary.csproj": {
+              "projectPath": "C:\\Users\\cedillo02\\Source\\Repos\\Glareyo\\Game-Programming-1\\Assignments\\Breakout_Midterm\\MonoGameLibrary\\MonoGameLibrary.csproj"
             }
           }
         }

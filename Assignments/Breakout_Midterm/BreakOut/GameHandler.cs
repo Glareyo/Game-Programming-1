@@ -10,6 +10,7 @@ namespace BreakOut
 {
     public class GameHandler : GameComponent
     {
+        //Testing some things
         LevelHandler levelHandler;
 
         List<Level> allLevels;

@@ -1,11 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\nemo1\\source\\repos\\Glareyo\\Game-Programming-1\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nemo1\\OneDrive\\Desktop\\Colombia College\\Columbia SP_24\\Game Programming 1\\Unity Breakout\\Assets\\scrButton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\cedillo02\\Source\\Repos\\Glareyo\\Game-Programming-1\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -13,28 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "scrButton.cs",
-              "DocumentMoniker": "C:\\Users\\nemo1\\OneDrive\\Desktop\\Colombia College\\Columbia SP_24\\Game Programming 1\\Unity Breakout\\Assets\\scrButton.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\OneDrive\\Desktop\\Colombia College\\Columbia SP_24\\Game Programming 1\\Unity Breakout\\Assets\\scrButton.cs",
-              "ToolTip": "C:\\Users\\nemo1\\OneDrive\\Desktop\\Colombia College\\Columbia SP_24\\Game Programming 1\\Unity Breakout\\Assets\\scrButton.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\OneDrive\\Desktop\\Colombia College\\Columbia SP_24\\Game Programming 1\\Unity Breakout\\Assets\\scrButton.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAB8AAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T19:54:37.609Z",
-              "EditorCaption": ""
             }
           ]
         }
