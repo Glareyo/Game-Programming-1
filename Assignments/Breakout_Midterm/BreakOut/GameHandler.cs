@@ -11,6 +11,7 @@ namespace BreakOut
     public class GameHandler : GameComponent
     {
         //Testing some things
+        //Breaking things
         LevelHandler levelHandler;
 
         List<Level> allLevels;
