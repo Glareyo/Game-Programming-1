@@ -32,9 +32,9 @@ namespace BreakOut
             allLevels = new List<Level>();
 
             allLevels.Add(new MainMenu(Game, "mainMenu"));
-            allLevels.Add(new InvaderLevel(Game, "Level 1", 1, 0));
-            allLevels.Add(new InvaderLevel(Game, "Level 2", 2, 0));
-            allLevels.Add(new InvaderLevel(Game, "Level 3", 30, 0));
+            allLevels.Add(new InvaderLevel(Game, "Level 1", 10, 0));
+            allLevels.Add(new InvaderLevel(Game, "Level 2", 20, 0));
+            allLevels.Add(new InvaderLevel(Game, "Level 3", 40, 0));
         }
 
         public void StartGame()
@@ -98,10 +98,6 @@ namespace BreakOut
                 {
                     levelHandler.NextLevel(GetNextLevel());
                 }
-                else if ((currentLevel as MainMenu).TutorialButton.IsClicked())
-                {
-                    Game.Exit();
-                }
                 else if ((currentLevel as MainMenu).ExitButton.IsClicked())
                 {
                     Game.Exit();
@@ -113,7 +109,7 @@ namespace BreakOut
                 {
                     levelHandler.NextLevel(ShowCompletedLevel(currentLevel as InvaderLevel));
                 }
-                else if ((currentLevel as InvaderLevel).BallsAreDestroyed())
+                else if ((currentLevel as InvaderLevel).BallsAreDestroyed() || (currentLevel as InvaderLevel).InvaderSucceededPastPlayer())
                 {
                     levelHandler.NextLevel(new GameOverLevel(Game,"Game Over"));
                 }

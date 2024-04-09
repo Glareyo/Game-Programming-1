@@ -12,22 +12,24 @@ namespace BreakOut.Levels
         ButtonHandler buttonHandler;
 
         public GameButton StartButton;
-        public GameButton TutorialButton;
         public GameButton ExitButton;
+        TutorialBox tb;
 
         public MainMenu(Game game, string _name) : base(game, _name)
         {
             buttonHandler = new ButtonHandler(game);
 
             StartButton = new GameButton(game,"Start");
-            TutorialButton = new GameButton(game,"Tutorial");
             ExitButton = new GameButton(game,"Exit");
 
+            tb = new TutorialBox(game);
+            tb.Location = new Vector2(Game.GraphicsDevice.Viewport.Width / 3, Game.GraphicsDevice.Viewport.Height / 4);
+
+
             buttonHandler.buttons.Add(StartButton);
-            buttonHandler.buttons.Add(TutorialButton);
             buttonHandler.buttons.Add(ExitButton);
 
-
+            LevelComponents.Add(tb);
             LevelComponents.Add(buttonHandler);
         }
 
@@ -39,6 +41,7 @@ namespace BreakOut.Levels
         public override void StartLevel()
         {
             buttonHandler.AddButtonsToGame();
+
             base.StartLevel();
         }
 

@@ -138,3 +138,6 @@ C:\Users\cedillo02\Source\Repos\Glareyo\Game-Programming-1\Assignments\Breakout_
 C:\Users\cedillo02\Source\Repos\Glareyo\Game-Programming-1\Assignments\Breakout_Midterm\BreakOut\bin\Debug\net6.0-windows\Content\SpriteMarker.xnb
 C:\Users\cedillo02\Source\Repos\Glareyo\Game-Programming-1\Assignments\Breakout_Midterm\BreakOut\bin\Debug\net6.0-windows\Content\buttons\ButtonText\Main Menu.xnb
 C:\Users\cedillo02\Source\Repos\Glareyo\Game-Programming-1\Assignments\Breakout_Midterm\BreakOut\bin\Debug\net6.0-windows\Content\buttons\ButtonText\Restart Level.xnb
+C:\Users\nemo1\source\repos\Glareyo\Game-Programming-1\Assignments\Breakout_Midterm\BreakOut\bin\Debug\net6.0-windows\Content\buttons\ButtonText\Main Menu.xnb
+C:\Users\nemo1\source\repos\Glareyo\Game-Programming-1\Assignments\Breakout_Midterm\BreakOut\bin\Debug\net6.0-windows\Content\buttons\ButtonText\Restart Level.xnb
+C:\Users\nemo1\Source\Repos\Glareyo\Game-Programming-1\Assignments\Breakout_Midterm\BreakOut\bin\Debug\net6.0-windows\Content\TutorialBox.xnb

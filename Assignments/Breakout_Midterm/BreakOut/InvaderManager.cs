@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 namespace BreakOut
 {
 
-    public enum BlockManagerState { Running, OutOfInvaders }
-    public class BlockManager : GameComponent
+    public enum InvaderManagerState { Running, OutOfInvaders, InvaderSucceeded }
+    public class InvaderManager : GameComponent
     {
         //List of Blocks
         //public List<MonogameBlock> Blocks { get; private set; }
         public List<Invader> Invaders { get; private set; }
-        public BlockManagerState State { get; private set; }
+        public InvaderManagerState State { get; private set; }
 
         int numOfSmallInvaders;
         int numOfLargeInvaders;
@@ -28,39 +28,38 @@ namespace BreakOut
         //Current Time before initializing blocks
         int CurrentSpawnInterval = 60;
 
-        float BlockSpeed;
+        float InvaderSpeed;
         Random random;
         Viewport vp;
 
-        public BlockManager(Game game) : base(game)
+        public InvaderManager(Game game) : base(game)
         {
             numOfSmallInvaders = 0;
             numOfLargeInvaders = 0;
 
-            State = BlockManagerState.Running;
+            State = InvaderManagerState.Running;
 
             Invaders = new List<Invader>();
             vp = game.GraphicsDevice.Viewport;
             random = new Random();
-            BlockSpeed = 0.01f;
         }
-        public BlockManager(Game game, int _numOfSmallInvaders, int _numOfLargeInvaders) : base(game)
+        public InvaderManager(Game game, int _numOfSmallInvaders, int _numOfLargeInvaders) : base(game)
         {
             numOfSmallInvaders = _numOfSmallInvaders;
             numOfLargeInvaders = _numOfLargeInvaders;
 
-            State = BlockManagerState.Running;
+            State = InvaderManagerState.Running;
 
             Invaders = new List<Invader>();
             vp = game.GraphicsDevice.Viewport;
             random = new Random();
-            BlockSpeed = 0.01f;
         }
 
 
 
         public override void Initialize()
         {
+            InvaderSpeed = 0.01f;
             BlockTexture = Game.Content.Load<Texture2D>("block_blue");
             base.Initialize();
         }
@@ -70,7 +69,11 @@ namespace BreakOut
             //Change to status of the Manager to reveal if all invaders are destroyed.
             if (NoMoreInvadersSpawning() && AllCurrentInvadersDestroyed())
             {
-                State = BlockManagerState.OutOfInvaders;
+                State = InvaderManagerState.OutOfInvaders;
+            }
+            else if (InvaderHasSucceededPastPlayer())
+            {
+                State = InvaderManagerState.InvaderSucceeded;
             }
             else
             {
@@ -111,7 +114,7 @@ namespace BreakOut
         {
             foreach(Invader invader in Invaders)
             {
-                invader.Move(BlockSpeed, gameTime);
+                invader.Move(InvaderSpeed, gameTime);
             }
         }
 
@@ -180,6 +183,18 @@ namespace BreakOut
             if (Invaders.Count <= 0)
             {
                 return true;
+            }
+            return false;
+        }
+
+        bool InvaderHasSucceededPastPlayer()
+        {
+            foreach(Invader invader in Invaders)
+            {
+                if (invader.invaderSucceeded)
+                {
+                    return true;
+                }
             }
             return false;
         }

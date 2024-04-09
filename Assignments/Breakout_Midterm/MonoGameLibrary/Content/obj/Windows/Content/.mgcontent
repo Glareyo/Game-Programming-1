@@ -4,8 +4,8 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/cedillo02/Source/Repos/Glareyo/Game-Programming-1/Assignments/Breakout_Midterm/MonoGameLibrary/Content/Arial.spritefont</File>
-    <File>C:/Users/cedillo02/Source/Repos/Glareyo/Game-Programming-1/Assignments/Breakout_Midterm/MonoGameLibrary/Content/SpriteMarker.png</File>
+    <File>C:/Users/nemo1/Source/Repos/Glareyo/Game-Programming-1/Assignments/Breakout_Midterm/MonoGameLibrary/Content/Arial.spritefont</File>
+    <File>C:/Users/nemo1/Source/Repos/Glareyo/Game-Programming-1/Assignments/Breakout_Midterm/MonoGameLibrary/Content/SpriteMarker.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

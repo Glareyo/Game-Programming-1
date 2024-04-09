@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/cedillo02/Source/Repos/Glareyo/Game-Programming-1/Assignments/Breakout_Midterm/BreakOut/Content/ufoFrames/ufoExplode/ufoExplodeF2.png</SourceFile>
-  <SourceTime>2024-04-04T15:48:36.0615563-05:00</SourceTime>
-  <DestFile>C:/Users/cedillo02/Source/Repos/Glareyo/Game-Programming-1/Assignments/Breakout_Midterm/BreakOut/Content/bin/Windows/Content/ufoFrames/ufoExplode/ufoExplodeF2.xnb</DestFile>
-  <DestTime>2024-04-04T15:54:52.4173994-05:00</DestTime>
+  <SourceFile>C:/Users/nemo1/Source/Repos/Glareyo/Game-Programming-1/Assignments/Breakout_Midterm/BreakOut/Content/ufoFrames/ufoExplode/ufoExplodeF2.png</SourceFile>
+  <SourceTime>2024-03-19T13:06:51.2781118-05:00</SourceTime>
+  <DestFile>C:/Users/nemo1/Source/Repos/Glareyo/Game-Programming-1/Assignments/Breakout_Midterm/BreakOut/Content/bin/Windows/Content/ufoFrames/ufoExplode/ufoExplodeF2.xnb</DestFile>
+  <DestTime>2024-04-07T15:05:16.219488-05:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T06:44:56-05:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

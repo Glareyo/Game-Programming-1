@@ -28,7 +28,7 @@ namespace BreakOut
         Paddle paddle;
         PaddleController paddleController;
 
-        BlockManager blockManager;
+        InvaderManager invaderManager;
         PowerupManager powerupManager;
         BallManager ballManager;
 
@@ -65,8 +65,8 @@ namespace BreakOut
             paddle = new Paddle(Game, ball);
             paddleController = new PaddleController(Game, ball);
             
-            //Set BlockManager with number or invaders
-            blockManager = new BlockManager(Game,numOfSmallInvaders,numOfLargeInvaders);
+            //Set InvaderManager with number or invaders
+            invaderManager = new InvaderManager(Game,numOfSmallInvaders,numOfLargeInvaders);
 
             powerupManager = new PowerupManager(Game);
             ballManager = new BallManager(Game,ball);
@@ -77,7 +77,7 @@ namespace BreakOut
 
             GameplayComponents.Add(ball);
             GameplayComponents.Add(paddle);
-            GameplayComponents.Add(blockManager);
+            GameplayComponents.Add(invaderManager);
             GameplayComponents.Add(ballManager);
             GameplayComponents.Add(powerupManager);
             GameplayComponents.Add(scoreBoard);
@@ -106,12 +106,12 @@ namespace BreakOut
             paddleController.HandleInput(gameTime);
             CheckForBallCollision();
             //Disable the gameplay if all invaders are destroyed
-            if (InvadersDestroyed() || BallsAreDestroyed())
+            if (InvadersDestroyed() || BallsAreDestroyed() || InvaderSucceededPastPlayer())
             {
                 this.State = GamePlayState.Disabled;
                 ballManager.ClearComponents();
                 powerupManager.ClearComponents();
-                blockManager.ClearComponents();
+                invaderManager.ClearComponents();
             }
 
             base.Update(gameTime);
@@ -126,9 +126,18 @@ namespace BreakOut
             return false;
         }
 
+        public bool InvaderSucceededPastPlayer()
+        {
+            if (invaderManager.State == InvaderManagerState.InvaderSucceeded)
+            {
+                return true;
+            }
+            return false;
+        }
+
         public bool InvadersDestroyed()
         {
-            if (blockManager.State == BlockManagerState.OutOfInvaders)
+            if (invaderManager.State == InvaderManagerState.OutOfInvaders)
             {
                 return true;
             }
@@ -139,11 +148,11 @@ namespace BreakOut
             for(int i = 0; i < ballManager.balls.Count; i++)
             {
                 ball = ballManager.balls[i];
-                foreach (Invader invader in blockManager.Invaders)
+                foreach (Invader invader in invaderManager.Invaders)
                 {
                     if (ball.Intersects(invader) && invader.BlockState != BlockState.Broken)
                     {
-                        blockManager.BlockIsHit(invader);
+                        invaderManager.BlockIsHit(invader);
                         ball.Direction.Y *= -1;
                         
                         //Updated Scoreboard

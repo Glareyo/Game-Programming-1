@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static BreakOut.Ball;
 
 namespace BreakOut
 {
@@ -12,6 +13,8 @@ namespace BreakOut
     {
         float animInterval;
         float targetAnimIntervalChange;
+
+        public bool invaderSucceeded;
 
         int currentFrame;
 
@@ -26,6 +29,7 @@ namespace BreakOut
             animInterval = 0;
             targetAnimIntervalChange = 120;
             currentFrame = 0;
+            invaderSucceeded = false;
         }
         public override void Initialize()
         {
@@ -70,6 +74,12 @@ namespace BreakOut
             base.Update(gameTime);
 
             ChangeFrame(gameTime);
+
+            //bottom Miss
+            if (this.Location.Y + this.spriteTexture.Height > this.Game.GraphicsDevice.Viewport.Height)
+            {
+                invaderSucceeded = true;
+            }
         }
 
         void ChangeFrame(GameTime gameTime)

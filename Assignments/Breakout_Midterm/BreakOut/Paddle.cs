@@ -27,7 +27,7 @@ namespace BreakOut
         public Paddle(Game game, Ball b)
             : base(game)
         {
-            this.Speed = 200;
+            this.Speed = 250;
             this.ball = b;
             controller = new PaddleController(game, ball);
 
@@ -38,7 +38,7 @@ namespace BreakOut
         {
             this.spriteTexture = this.Game.Content.Load<Texture2D>("paddleSmall");
 #if DEBUG   //Show markers if we are in debug mode
-            this.ShowMarkers = true;
+            //this.ShowMarkers = true;
 #endif
             SetInitialLocation();
             base.LoadContent();

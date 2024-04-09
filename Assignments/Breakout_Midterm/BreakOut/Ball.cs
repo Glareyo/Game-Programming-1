@@ -25,7 +25,7 @@ namespace BreakOut
         {
             this.State = BallState.OnPaddleStart;
 
-            this.ShowMarkers = true;
+            //this.ShowMarkers = true;
         }
 
         protected override void LoadContent()
@@ -102,9 +102,14 @@ namespace BreakOut
             }
 
             //Top
-            if (this.Location.Y < 0)
+            if (this.Location.Y - this.SpriteTexture.Height / 2 < 0)
             {
+                //this.Location.Y = 0 + this.SpriteTexture.Height;
                 this.Direction.Y *= -1;
+            }
+            else if (this.Location.Y - this.SpriteTexture.Height / 2 < -1)
+            {
+                this.Location.Y = 0 + this.SpriteTexture.Height;
             }
         }
     }

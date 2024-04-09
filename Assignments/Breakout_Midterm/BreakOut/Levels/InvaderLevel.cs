@@ -51,5 +51,9 @@ namespace BreakOut.Levels
         {
             return gamePlayHandler.BallsAreDestroyed();
         }
+        public bool InvaderSucceededPastPlayer()
+        {
+            return gamePlayHandler.InvaderSucceededPastPlayer();
+        }
     }
 }
